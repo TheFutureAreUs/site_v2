@@ -14,6 +14,23 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+# Custom gems------------------------------------------------------------------------
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'mail_form', '~> 1.6'
+gem 'acts-as-taggable-on', '~> 4.0'
+gem 'devise', '~> 4.3'
+gem 'geocoder', '~> 1.4'
+gem 'gmaps4rails'
+gem 'tinymce-rails', '~> 4.3'
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.7'
+gem 'font-awesome-sass', '~> 4.7'
+gem 'slide-down-alerts-rails', '~> 0.0.2'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'will_paginate', '~> 3.1'
+gem 'dotenv-rails', :groups => [:development, :test]
+#------------------------------------------------------------------------------------
+
 
 
 group :development, :test do

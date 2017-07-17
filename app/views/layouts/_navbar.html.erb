@@ -1,0 +1,33 @@
+<div class="nav-fixed">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-left">
+          <li class="button-left left-side home"><%= link_to '<i class="fa fa-home" aria-hidden="true"></i>'.html_safe, root_path %></li>
+        
+          <li class="margin-drop">
+          <div class="dropdown nav navbar-nav navbar-left">
+            <button class="drop btn btn-secondary dropdown-toggle button button-list" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <%= link_to "About", '#'%><br />
+                <%= link_to "Privacy Policy", privacy_path%><br />
+                <%= link_to "Terms of Use", terms_path%><br />
+                <%= link_to "Contact Us", new_contact_path%>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Search By College", regions_path, class: 'button button-list search-bar' %></li>
+        <li>
+            <%= form_tag search_path, method: :get do |f|%>
+            <%= icon('search', class: 'eyeglass') %>
+              <%= text_field_tag :search, nil, class: 'button button-list search-bar well well-transparent', placeholder: 'search' %>
+            <% end %>
+        </li>
+       
+</nav>
+  
+</div>

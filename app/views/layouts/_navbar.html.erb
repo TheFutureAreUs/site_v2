@@ -28,7 +28,27 @@
               <%= text_field_tag :search, nil, class: 'button button-list search-bar well well-transparent', placeholder: 'search' %>
             <% end %>
         </li>
-       
-</nav>
-  
+        <% if user_signed_in? %>
+          <li class="button button-list"><%= link_to "Create A Listing!", new_listing_path %></li>
+            <li class=" dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= link_to(avatar_for(current_user, size: 35), current_user) %>
+            </li>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li class="dropdown-item"><%= link_to 'My Profile', current_user %></li>
+
+              <li class="dropdown-item"><%= link_to 'Edit My Profile', edit_user_path(current_user) %></li>
+
+              <li class="dropdown-item"><%= link_to 'My Account', edit_user_registration_path %></li>
+
+              <li class="dropdown-item"><%= link_to 'My Listings', mylistings_path %></li>
+
+              <li class="dropdown-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+            </div>
+        <% else %>
+            <li><%= link_to 'Sign In / Sign Up', new_user_session_path, class: 'button button-list search-bar' %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </nav> 
 </div>

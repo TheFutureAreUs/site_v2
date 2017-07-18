@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :contacts, only: [:new, :create]
   resources :categories
   resources :listings
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   match '/privacy',     to: 'pages#privacy',        via: :get
   match '/terms',       to: 'pages#terms',          via: :get
   match '/mylistings',  to: 'listings#mylistings',  via: :get
+  match '/colleges/find_by_region', to: 'colleges#find_by_region', via: :post
 end

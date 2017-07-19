@@ -1,8 +1,6 @@
 class RegionsController < ApplicationController
 
   def index
-    @regions = Region.all
-    @maryland_colleges = @regions[0]
   end
 
   def show

@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+@import "jbar.colors";
+@import "jbar";
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+
+//scss files imported here
+@import "categories";
+@import "colleges";
+@import "contacts";
+@import "listings";
+@import "pages";
+@import "regions";
+@import "welcome";
+@import "modules/buttons";
+@import "modules/navbar";
+
+// Colors
+$highlight: #8bc6db;
+$dark: #424652;

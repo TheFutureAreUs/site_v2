@@ -1,0 +1,50 @@
+.well-transparent {
+  background-color: white; 
+}
+
+.eyeglass {
+  float: right;
+  top: 18px;
+  right: 174px;
+  position: relative;
+  z-index: 2;
+  color: #777;  
+}
+
+.button-left {
+  margin-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.button {
+  border: 1px solid;
+  // padding: 0.5em 1em !important;
+  border-radius: 50px;
+  border-color: #e7e7e7;
+  color: #777;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-right {
+  margin-right: -12px;
+  color: #e7e7e7;
+}
+
+.button-list {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.btn-shape {
+  margin-top: 10px;
+}
+
+#new_listing_button {
+  margin-bottom: 15px;
+}

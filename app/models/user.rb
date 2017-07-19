@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   has_many :listings, dependent: :destroy
 
+  mount_uploader :avatar, AvatarUploader
+
   validates :email,
     format: {
       with: /\.edu\z/,

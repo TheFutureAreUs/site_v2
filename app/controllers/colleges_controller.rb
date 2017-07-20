@@ -1,6 +1,7 @@
 class CollegesController < ApplicationController
 
   def show
+    @listings =Listing.where(college_id: params[:id])
   end
 
   def find_by_region

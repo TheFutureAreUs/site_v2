@@ -30,6 +30,7 @@ gem 'slide-down-alerts-rails', '~> 0.0.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'will_paginate', '~> 3.1'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'underscore-rails'
 #------------------------------------------------------------------------------------
 
 

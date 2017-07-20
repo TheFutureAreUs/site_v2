@@ -1,0 +1,92 @@
+<!--<div class="row panel-body">
+  <div class="col-md-6 col-md-offset-3 panel panel-default form-style">-->
+    <div class="">
+
+      <div class="sign-prof">
+        <div class="inner_cont">
+
+          <h2 class="log-title">Sign up</h2>
+
+            <div class="login-body">
+
+              <%= form_for(resource, as: resource_name, url: subscriptions_path(resource_name), html: { method: :post }) do |f| %>
+
+                    <div class="li-Form-control li-Form-control--login">
+                      <%= f.label :username, class: 'li-Label' %><br />
+                      <%= f.text_field :username, class: 'li-Input form-control' %>
+                    </div>
+
+                    <div class="li-Form-control li-Form-control--login">
+                      <%= f.label :email, class: 'li-Label' %><br />
+                      <%= f.email_field :email, class: 'li-Input form-control' %>
+                    </div>
+
+                    <div class="li-Form-control li-Form-control--login">
+                      <%= f.label :password, class: 'li-Label' %>
+                      <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                      <% end %><br />
+                      <%= f.password_field :password, autocomplete: "off", class: 'li-Input form-control' %>
+                    </div>
+
+                    <div class="li-Form-control li-Form-control--login">
+                      <%= f.label :password_confirmation, class: 'li-Label' %><br />
+                      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'li-Input form-control' %>
+                    </div>
+
+                <%= form_for(resource, as: resource_name, url: subscriptions_path(resource_name), html: { method: :post }) do |f| %>
+                    <article>
+                      <% if flash[:error].present? %>
+                        <div id="error_explanation">
+                          <p><%= flash[:error] %></p>
+                        </div>
+                      <% end %>
+                      <br />
+                      <br />
+                      <label class="li-Form-control li-Form-control--login">
+                        <span>Yearly Subscription: $89.99</span>
+                      </label>
+                    </article>
+
+                    <div class="form-actions">
+
+                      <%= hidden_field_tag :subscription, value: params[:subscription]='yes' %>
+
+                                          
+                      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                            data-description="<%= @year_desc %>"
+                            data-amount="<%= @yearly_amount %>"
+                            data-locale="auto">
+                              "<%= f.button :submit %>"
+                      </script>
+
+                    </div>
+
+                    <% end %>
+                    
+              <% end %> 
+
+              <div class="li-Form-control li-Form-control--login">
+                <%= link_to  "Monthly Subscription", new_charge_path %><br />
+
+                <%- if controller_name != 'sessions' %>
+                  <%= link_to "Log in", new_session_path(resource_name) %><br />
+                <% end -%>
+
+
+                <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+                <% end -%>
+              </div>
+
+            </div>
+
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

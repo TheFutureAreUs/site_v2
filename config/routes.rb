@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
+
+
   devise_for :users
   resources :contacts, only: [:new, :create]
   resources :categories
   resources :listings
+  resources :charges, only: [:new, :create]
+  resources :subscriptions, only: [:new, :create]
 
 
   resources :regions do
     resources :colleges
   end
 
+  get 'confirmation', to: 'subscriptions#confirmation', as: 'confirmation'
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
   get "/search" => "listings#search"
 
   root 'welcome#index'

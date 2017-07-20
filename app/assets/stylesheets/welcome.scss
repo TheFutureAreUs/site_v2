@@ -65,7 +65,7 @@
 }
 
 .top {
-  background-image: url(TheFutureAreUs.jpg);
+  background: image-url(TheFutureAreUs.jpg);
   height: 600px;
   position: relative;
   background-attachment: fixed;
@@ -85,7 +85,7 @@
   }
 
 .top-about {
-  background-image: url(randompic.jpeg);
+  background: image-url(randompic.jpeg);
   height: 200px;
   position: relative;
   background-attachment: fixed;
@@ -95,7 +95,7 @@
 }
 
 .top-plans {
-  background-image: url(business.jpeg);
+  background: image-url(business.jpeg);
   height: 200px;
   position: relative;
   background-attachment: fixed;

@@ -3,6 +3,7 @@ class ChargesController < ApplicationController
   before_action :set_plan
   before_action :description
 
+
   def new
     @user = User.new
   end

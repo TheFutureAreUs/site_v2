@@ -40,6 +40,26 @@ class ListingsController < ApplicationController
     @listings = Listing.where(user: current_user)
   end
 
+  def search
+    @location = params[:search]
+    @distance = params[:miles]
+    @listings = Listing.near(@location, @distance)
+
+    if @location.empty?
+      flash.now[:alert] = "You can't search without a search term, please enter a location and retry!"
+      redirect_to root_path
+    else 
+      if @listings.length < 1
+        flash.now[:alert] = "Sorry! We couldn't find any listings within #{@distance} miles of #{@location}."
+        redirect_to root_path
+      else
+        search_map(@listings)
+      end 
+    end 
+
+    @listings = Listing.where(params[:id]).order("created_at DESC").paginate(page: params[:page], per_page: 6)
+  end  
+
   private 
 
     def listing_params
@@ -50,6 +70,16 @@ class ListingsController < ApplicationController
       @listing = Listing.find(params[:id])
       unless current_user = @listing.user 
         redirect_to root_path, alert: "Sorry, you are not the user of this listing."
+      end
+    end
+
+    def search_map(listings)
+      @listings = listings
+      @hash = Gmaps4rails.build_markers(@listings) do |listing, marker|
+        marker.lat listing.latitude
+        marker.lng listing.longitude
+        marker.infowindow "<a href='/listings/"+"#{listing.id}"+"'>#{listing.title}, #{listing.address}</a>"
+        marker.json({ title: listing.title, id: listing.id })
       end
     end
 

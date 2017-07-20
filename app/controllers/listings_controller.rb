@@ -43,7 +43,7 @@ class ListingsController < ApplicationController
   private 
 
     def listing_params
-      params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_nums, :college_id, :region_id)
+      params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_num, :college_id, :region_id)
     end
 
     def is_user?

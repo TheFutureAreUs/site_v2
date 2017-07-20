@@ -9,7 +9,7 @@ class Listing < ActiveRecord::Base
   validates_presence_of :description
   validates_presence_of :body
   validates_presence_of :address
-  validates_presence_of :phone_nums
+  validates_presence_of :phone_num
   validates_presence_of :emails_address
 
   geocoded_by :address

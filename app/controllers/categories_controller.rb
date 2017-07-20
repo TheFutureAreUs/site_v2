@@ -17,6 +17,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @listings = Listing.where(category_id: params[:id]).order("created_at DESC").paginate(page: params[:page], per_page: 6)
+    @category = Category.find(params[:id])
   end
 
 end

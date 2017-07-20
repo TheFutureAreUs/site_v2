@@ -14,7 +14,7 @@ class SubscriptionsController < ApplicationController
     if params[:subscription].include? 'yes'
       SecondStripeTool.create_membership(email: params[:stripeEmail],
                                   stripe_token: params[:stripeToken],
-                                  year_plan: @year_plan
+                                  plan: @plan
                                   )
     else
       customer = SecondStripeTool.create_customer(email: params[:stripeEmail],                                                      stripe_token: params[:stripeToken]
@@ -45,7 +45,7 @@ class SubscriptionsController < ApplicationController
   private
 
     def set_year_plan
-      @year_plan = 1001
+      @plan = 1001
     end
 
     def year_amount_to_be_charged

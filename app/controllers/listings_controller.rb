@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 
   def new 
-    @listings = Listing.new
+    @listing = Listing.new
   end
 
   def show
@@ -36,10 +36,21 @@ class ListingsController < ApplicationController
     redirect_to root_path
   end
 
+  def mylistings
+    @listings = Listing.where(user: current_user)
+  end
+
   private 
 
     def listing_params
       params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_nums, :college_id, :region_id)
+    end
+
+    def is_user?
+      @listing = Listing.find(params[:id])
+      unless current_user = @listing.user 
+        redirect_to root_path, alert: "Sorry, you are not the user of this listing."
+      end
     end
 
 end

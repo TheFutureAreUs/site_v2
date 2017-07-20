@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :listings
   resources :charges, only: [:new, :create]
   resources :subscriptions, only: [:new, :create]
+  resources :users
 
 
   resources :regions do

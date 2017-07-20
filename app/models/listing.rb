@@ -15,6 +15,9 @@ class Listing < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?
 
+  acts_as_taggable # Alias for acts_as_taggable_on :tags
+
+
   def self.search(params)
     listings = Listing.where(category_id: params[:category].to_i)
     listings = listings.where("title like ? or description like ?", params             [:search], params[:search]) if params[:search].present?

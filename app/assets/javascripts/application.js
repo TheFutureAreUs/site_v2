@@ -17,3 +17,7 @@
 //= require underscore
 //= require gmaps/google
 
+document.addEventListener("turbolinks:load", function() {
+  tinymce.remove();
+  tinymce.init({ selector:'textarea#listing_body' });
+});

@@ -31,6 +31,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'will_paginate', '~> 3.1'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'underscore-rails'
+gem 'sass', '~> 3.5'
 #------------------------------------------------------------------------------------
 
 

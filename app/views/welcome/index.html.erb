@@ -10,12 +10,38 @@
     </div>-->
     
     <!-- Map/Search Section -->
-    <div class="parallax-struct">
-      <div class="explore-topics">
-        <h2 class="map_search card-top-title">FIND A LISTING</h2>
-        <%= render "layouts/home_map" %>
+    <aside class="col-md-4 sec-sidebar">
+      <div class="ey_nav_div">
+          <div class="explore-topics">
+            <h2 class="map_search card-top-title">GET STARTED</h2>
+          </div>
+          <p>Welcome to TheFutureAreUs, We provide students a platform to promote your business, for a better and brighter future!</p>
+
+          <br />
+
+          <ol>
+            <li>Click on the state your school is in</li>
+            <li>Sign in/ Sign up (School email required)</li>
+            <li>Post an Ad for your business, refer a student business ,  or search for a service!</li>
+          </ol>
+        
       </div>
-    </div>
+    </aside>
+    <aside class="col-md-4 main-sidebar">
+      <div class="ey_nav_div">
+          <div class="explore-topics">
+            <h2 class="map_search card-top-title">FIND A LISTING</h2>
+          </div>
+        <%= form_tag( '/search', method: :get, class: "") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "city, state, zip, address", class: "button button-list search-bar well well-transparent" %>
+
+          <!--<%= select_tag :miles, options_for_select([["within 25 miles", "25"],["within 50 miles", "50"], ["within 75 miles", "75"]]), class: "map_form button button-list search-bar well well-transparent" %>-->
+
+          <%= submit_tag "Find Listings", name: nil, :class => "button button-list search-bar well well-transparent" %>
+        <% end %>
+      </div>
+    </aside>
+        <%= render "layouts/home_map" %>
 
     <!--<div class="top-about">
       <div class="page-header">

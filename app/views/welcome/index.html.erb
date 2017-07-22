@@ -33,7 +33,7 @@
             <h2 class="map_search card-top-title">FIND A LISTING</h2>
           </div>
         <%= form_tag( '/search', method: :get, class: "") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "city, state, zip, address", class: "button button-list search-bar well well-transparent" %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search your school", class: "button button-list search-bar well well-transparent" %>
 
           <!--<%= select_tag :miles, options_for_select([["within 25 miles", "25"],["within 50 miles", "50"], ["within 75 miles", "75"]]), class: "map_form button button-list search-bar well well-transparent" %>-->
 

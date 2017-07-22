@@ -2,28 +2,52 @@
 	<li><%= link_to 'Home', root_path %></li>
 	<li class="active"><span>Contact Us</span></li>
 </ol>
-<h1 class="page_title">Contact Us</h1>
 
-<div class="skinny_wrapper wrapper_padding contact-body">
-  <%= form_for @contact do |f| %>
-    <%= f.label :name %><br />
-    <%= f.text_field :name,  required: true, class: 'form-control' %>
+<div class="col-md-offset-3 contact-body">
+  <div class="well well-sm">
+    <div class="form-horizontal">
+      <%= form_for @contact do |f| %>
 
-    <br />
+        <h1 class="text-center">Contact Us</h1>
+        <!-- Name -->
+        <div class="form-group">
+          <%= f.label :name, class: 'col-md-3 control-label' %>
+          <div class="col-md-9">
+            <%= f.text_field :name,  required: true, class: 'form-control' %>
+          </div>
+        </div>
 
-    <%= f.label :email %><br />
-    <%= f.email_field :email,  required: true, class: 'form-control' %>
+        <!-- Email -->
+        <div class="form-group">
+          <%= f.label :email,  class: 'col-md-3 control-label' %>
+          <div class="col-md-9">
+            <%= f.email_field :email,  required: true, class: 'form-control' %>
+          </div>
+        </div>
 
-    <br />
+        <!-- Message -->
+        <div class="form-group">
+          <%= f.label :message, class: 'col-md-3 control-label' %>
+          <div class="col-md-9">
+            <%= f.text_area :message, as: :text, class: 'form-control' %>
+          </div>
+        </div>
 
-    <%= f.label :message %><br />
-    <%= f.text_area :message, as: :text, class: 'form-control' %>
+        <!-- Hidden -->
+        <div class="hidden form-group">
+          <%= f.label :nickname %>
+          <div class="col-md-9">
+            <%= f.text_field :nickname, hint: 'leave this field blank', class: 'form-control' %>
+          </div>
+        </div>
 
-    <div class="hidden">
-      <%= f.label :nickname %><br />
-      <%= f.text_field :nickname, hint: 'leave this field blank' %>
+        <!-- Submit button -->
+        <div class="form-group">
+          <div class="col-md-12 text-right">
+            <%= f.submit 'Send', class: 'btn btn-primary btn-lg' %>
+          </div>
+        </div>
+      <% end %>
     </div>
-
-    <%= f.submit 'Send', class: 'button button-list search-bar log-btn' %>
-  <% end %>
+  </div>
 </div>

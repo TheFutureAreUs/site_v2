@@ -13,7 +13,7 @@
         <div><h2 class="header_college">Maryland</h2></div>
       <div class="college_wrapper">
           <% @maryland_colleges.colleges.each do |college| %>
-              <%= link_to college.name, @maryland_colleges, class: 'college_names' %>
+              <%= link_to college.name, region_college_path(@maryland_colleges, college), class: 'college_names' %>
           <% end %>
       </div>
       <div><h2>Georgia</h2></div>

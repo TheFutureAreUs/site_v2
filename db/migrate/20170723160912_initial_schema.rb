@@ -7,12 +7,10 @@ class InitialSchema < ActiveRecord::Migration[5.0]
 
     create_table :regions do |t|
       t.string :name
-      t.integer  :category_id
     end
 
     create_table :colleges do |t|
       t.string :name
-      t.integer :category_id
       t.integer :region_id
     end
 
@@ -29,6 +27,7 @@ class InitialSchema < ActiveRecord::Migration[5.0]
       t.integer :college_id
       t.timestamps
     end
+
 
   end
 end

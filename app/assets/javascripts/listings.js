@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  var getSpeccolleges = function(region_id){
-    var $speccolleges = $('#listing_college_id');
-    $($speccolleges).empty();
+  var getColleges = function(region_id){
+    var $colleges = $('#listing_college_id');
+    $($colleges).empty();
     
     $.post('/colleges/find_by_region', { region_id: region_id }, function(data){
       $.each(data.colleges, function(index, college){
@@ -10,10 +10,10 @@ $(document).ready(function(){
         option.text(college.name);
         option.appendTo($colleges);
       });
-    })
+    });
   };
   
-  var getSelectedCollege = function(){
+  var getSelectedRegion = function(){
     return $('#listing_region_id').val();
   };
   

@@ -1,6 +1,6 @@
 <%= javascript_include_tag 'listings.js' %>
 
-<h1 class="page_title">Create Listing</h1>
+<h1 class="card-top-title">CREATE LISTING</h1>
 <%= form_for(@listing) do |f| %>
   <div class="row">
     <div class="col-sm-4">
@@ -27,13 +27,13 @@
           <li class="list-group-item">
             <div class="field">
               <%= f.label "Email Address" %><br />
-              <%= f.text_area :emails_address, class: "form-control" %>
+              <%= f.email_field :emails_address, class: "form-control" %>
             </div>
           </li>
           <li class="list-group-item">
             <div class="field">
               <%= f.label "Phone Number" %><br />
-              <%= f.text_area :phone_num, class: "form-control" %>
+              <%= f.telephone_field :phone_num, class: "form-control" %>
             </div>
           </li>
           <li class="list-group-item">
@@ -57,7 +57,7 @@
           <li class="list-group-item">
             <div class="field">
               <%= f.label "School Name" %><br />
-              <%= f.select :college_id, College.all.map { |f| [f.name, f.id] }  %>
+              <%= f.select :college_id, College.all.map { |f| [f.name, f.id] } %>
             </div>
           </li>
           <li class="list-group-item">

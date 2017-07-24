@@ -1,24 +1,35 @@
-<div class="row">
-  <div class="col-md-1 col-lg-2"></div>
-    <div class="col-md-10 col-lg-8 text-xs-center">
-      <div class="border-profile">
-        <div>
-          <h1 class="user-profile"><em>Profile for <%= @user.username %></em></h1>
-        </div>
 
-        <%= avatar_for(@user) %>
-
-        <br />
-        
-        <div class="btn-margin" >
-          <%= @user.description %>
-        </div>
-
-        <br />
-
-        <%= link_to "Edit", edit_user_path(@user), class: 'btn-margin button btn btn-md new-btn' %>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body text-left">
+                <div class="row">
+                  <div class="col-md-12 ">
+                    <center>
+                      <%= avatar_for(@user) %>
+                    </center>
+                  </div>
+                  <div class="col-md-12">
+                    <h3 class="user-profile"><em>Profile for <%= @user.username %></em></h3>
+                    <em>
+                    <span class="help-block"><%= @user.email %></span>
+                    <span class="help-block"><%= @user.occupation %></span>
+                    </em>
+                    <span class="help-block"><%= @user.description %></span>
+                    <div id="IdFooter" class="text-right ">
+                      <%= link_to "Edit", edit_user_path(@user), class: 'btn-margin button btn btn-md new-btn' %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4"></div>
       </div>
     </div>
-
-  </div>
 </div>
+
+

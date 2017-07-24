@@ -1,47 +1,43 @@
 
-<div class="edit-profile">
-    <h1 class="edit-title"><em>Edit Profile</em></h1>
-    <%= form_for(@user, html: { multipart: true }) do |f| %>
-  
+<h1 class="card-top-title">EDIT PROFILE</h1>
+<div class="form-horizontal">
+        <%= form_for(@user, html: { multipart: true }) do |f| %>
             <div class="form-group">
-                <%= f.label :avatar, class: 'col-sm-2 control-label' %>
-                <br />
-                <br />
+            <%= f.label :avatar, class: 'col-md-4 control-label' %>
+            <div class="col-md-4">
+                <%= f.file_field :avatar %>
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <%= f.label :username, class: 'col-md-4 control-label' %>
+            <div class="col-sm-6">
+                <%= f.text_field :username, autofocus: true,  class: "form-control input-md" %>
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <%= f.label 'Occupation', class: 'col-md-4 control-label' %>
                 <div class="col-sm-6">
-                    <%= f.file_field :avatar %>
+                <%= f.text_field :occupation, autofocus: true,  class: "form-control" %>
                 </div>
             </div>
-            <br />
-            <br />
 
             <div class="form-group">
-                <%= f.label :username, class: 'col-sm-2 control-label' %>
-                <br />
-                <br />
-                <div class="col-sm-6">
-                    <%= f.text_field :username, autofocus: true,  class: "form-control" %>
-                </div>
+            <%= f.label :description, class: 'col-md-4 control-label' %>
+            <div class="col-sm-6">
+                <%= f.text_area :description, class: "form-control" %>
             </div>
-            <br />
-            <br />
+            </div>
 
-            <div class="form-group">
-                <%= f.label :description, class: 'col-sm-2 control-label' %>
-                <br />
-                <br />
-                <div class="col-sm-6">
-                    <%= f.text_area :description, class: "form-control user_desc" %>
-                </div>
+            <div class="form-group container">
+            <div class="col-sm-6 text-right">
+                <%= f.submit "Save Changes", class: 'btn btn-primary btn-md' %>
             </div>
-            <br />
-            <br />
+            </div>
+        <% end %>
 
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-6">
-                    <br />
-                    <br />
-                    <%= f.submit "Save Changes", class: "col-sm-2 control-label btn btn-primary" %>
-                </div>
-            </div>
-    <% end %>
+    </div>
+
+  </div>
 </div>

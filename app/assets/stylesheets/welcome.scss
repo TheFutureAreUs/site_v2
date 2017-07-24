@@ -11,14 +11,18 @@ a {
 }
 
 .new_color {
-  color: rgb(78, 203, 252);
+  background-color: rgb(78, 203, 252);
 }
 
 .about_section {
   font-family: 'Bellefair', serif;
   text-align: left;
-  font-size: 30px;
-  color: rgb(159, 159, 160);
+  font-size: 25px;
+  color: black;
+}
+
+.about_card {
+  color: black;
 }
 
 .list_style {
@@ -70,7 +74,7 @@ a {
 
 .top {
   background: image-url("TheFutureAreUs.jpg");
-  height: 600px;
+  height: 350px;
   position: relative;
   background-attachment: fixed;
   background-position: center;

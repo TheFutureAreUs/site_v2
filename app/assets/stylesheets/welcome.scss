@@ -6,6 +6,14 @@
   color: rgb(78, 203, 252);
 }
 
+a { 
+  color: rgb(78, 203, 252);
+}
+
+.new_color {
+  color: rgb(78, 203, 252);
+}
+
 .about_section {
   font-family: 'Bellefair', serif;
   text-align: left;
@@ -186,6 +194,7 @@ html, body {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   // margin-bottom: 60px;
+  //background: rgb(78, 203, 252);
   background: white;
   height: 100%;
   width: 100%;
@@ -204,34 +213,34 @@ h1 {
 } 
 
 .main-sidebar {
-  margin-right: 40px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.6);
+  margin-left: 40px;
+  //right: 0;
+  background: rgba(255, 255, 255, 0.8);
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  padding: 20px;
+  //padding: 20px;
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.09);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
   border-radius: 3px;
   text-align: center;
-  margin-top: 267px;
+  margin-top: 280px;
 }
 
 .sec-sidebar {
-  margin-right: 40px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.6);
+  margin-left: 40px;
+  //right: 0;
+  background: rgba(255, 255, 255, 0.85);
   position: fixed;
   overflow-y: auto;
   z-index: 1000;
-  padding: 20px;
+  //padding: 20px;
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.09);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
   border-radius: 3px;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 

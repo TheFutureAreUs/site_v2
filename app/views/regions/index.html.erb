@@ -1,3 +1,7 @@
+<ol class="breadcrumb breadcrumb-arrow">
+	<li><%= link_to 'Home', root_path %></li>
+	<li class="active"><span>College List</span></li>
+</ol>
 <div class="college_header">
   <div class="top_box">
     <h1 id="title_list">List of Colleges</h1>
@@ -10,11 +14,13 @@
   <div class="">
 
     <div class="">
-        <div><h2 class="header_college">Maryland</h2></div>
-      <div class="college_wrapper">
+      <div class="panel panel-default container">
+        <h2 class="header_college">Maryland</h2><br />
+        <div class="college_wrapper">
           <% @maryland_colleges.colleges.each do |college| %>
-              <%= link_to college.name, region_college_path(@maryland_colleges, college), class: 'college_names' %>
+              <%= link_to college.name, region_college_path(@maryland_colleges, college), class: 'college_names ' %>
           <% end %>
+        </div>
       </div>
       <div><h2>Georgia</h2></div>
     </div>

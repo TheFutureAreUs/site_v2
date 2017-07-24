@@ -1,6 +1,7 @@
 .search-bar {
   padding-top: 10px;
   padding-bottom: 10px;
+  color: rgb(78, 203, 252);
 }
 
 .navbar-default {
@@ -38,4 +39,8 @@
 .nav_image {
   width: 200px;
   height: 100px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: rgb(78, 203, 252);
 }

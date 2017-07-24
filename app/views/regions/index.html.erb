@@ -6,7 +6,7 @@
   <div class="top_box">
     <h1 id="title_list">List of Colleges</h1>
     <p id="title_desc">
-      Below is a list of colleges and universities
+      Below is a list of colleges and universities, please contact us if your college or university is not listed.
     </p>
   </div>
 </div>
@@ -15,6 +15,14 @@
 
     <div class="">
       <div class="panel panel-default container">
+        <h2 class="header_college">Georgia</h2><br />
+        <div class="college_wrapper">
+          <% @georgia_colleges.colleges.each do |college| %>
+              <%= link_to college.name, region_college_path(@georgia_colleges, college), class: 'college_names ' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="panel panel-default container">
         <h2 class="header_college">Maryland</h2><br />
         <div class="college_wrapper">
           <% @maryland_colleges.colleges.each do |college| %>
@@ -22,7 +30,6 @@
           <% end %>
         </div>
       </div>
-      <div><h2>Georgia</h2></div>
     </div>
   </div>
 </div>

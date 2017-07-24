@@ -3,6 +3,7 @@ class RegionsController < ApplicationController
   def index
     @regions = Region.all
     @maryland_colleges = @regions[0]
+    @georgia_colleges = @regions[1]
   end
 
   def show

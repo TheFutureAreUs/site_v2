@@ -9,7 +9,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params)
+    @listing = Listing.new(params[:id])
     @listing.user = current_user
     if @listing.save
       redirect_to @listing
@@ -63,7 +63,7 @@ class ListingsController < ApplicationController
   private 
 
     def listing_params
-      params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_num, :college_id, :region_id)
+      params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_num, :college_id, :region_id, :occupation)
     end
 
     def is_user?

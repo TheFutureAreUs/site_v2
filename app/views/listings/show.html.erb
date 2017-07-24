@@ -4,14 +4,22 @@
     <li><span><%= @listing.title %></span></li>
 </ol>
 
+
+
 <div class="row">
   <div class="col-md-1 col-lg-2"></div>
   <div class="col-md-10 col-lg-8 text-xs-center">
+  
     <h1><%= @listing.title %></h1>
-    <h6>posted <%= time_ago_in_words(@listing.created_at) %></h6>
+    <h4>posted <%= time_ago_in_words(@listing.created_at) %></h4>
     <%= @listing.body.html_safe %>
 
-    <div class="user-bio">
+    <div class="col-sm-6">
+      <div class="card">
+        <h4><%= @listing.emails_address %></h4>
+        <h4><%= @listing.phone_num %></h4>
+        <h4><%= @listing.address %></h4>
+      </div>
     </div>
 
     <div id="disqus_thread">

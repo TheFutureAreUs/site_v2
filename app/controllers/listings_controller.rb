@@ -1,4 +1,8 @@
 class ListingsController < ApplicationController
+  # user has to be logged in to post listings
+  before_filter :authenticate_user!, only: [:new, :create]
+  # makes sure random people won't be able to edit, delete, or update listings
+  before_filter :is_user?, only: [:edit, :update, :delete]
 
   def new 
     @listing = Listing.new
@@ -41,21 +45,7 @@ class ListingsController < ApplicationController
   end
 
   def search
-    @location = params[:search]
-    @distance = params[:miles]
-    @listings = Listing.near(@location, @distance)
-
-    if @location.empty?
-      flash.now[:alert] = "You can't search without a search term, please enter a location and retry!"
-      redirect_to root_path
-    else 
-      if @listings.length < 1
-        flash.now[:alert] = "Sorry! We couldn't find any listings within #{@distance} miles of #{@location}."
-        redirect_to root_path
-      else
-        search_map(@listings)
-      end 
-    end 
+    @listings = Listing.search(params)
 
     @listings = Listing.where(params[:id]).order("created_at DESC").paginate(page: params[:page], per_page: 6)
   end  

@@ -19,9 +19,9 @@ class Listing < ActiveRecord::Base
 
 
   def self.search(params)
-    listings = Listing.where(college_id: params[:college].to_i)
-    listings = listings.where("title like ? or description like ?", params             [:search], params[:search]) if params[:search].present?
-    listings = listings.near(params[:location], 20) if params[:location] .present?
+    listings = Listing.where(category_id: params[:category].to_i)
+    listings = listings.where("title LIKE ? or description LIKE ?", params[:search],params[:search]) if params[:search].present?
+    listings = listings.near(params[:location], 20) if params[:location].present?
     listings
   end
 end

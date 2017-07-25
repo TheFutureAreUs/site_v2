@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { charges: "charges", subscriptions: "subscriptions"}
   resources :contacts, only: [:new, :create]
   resources :categories
-  resources :listings
   resources :charges, only: [:new, :create]
   resources :subscriptions, only: [:new, :create]
   resources :users
@@ -16,9 +15,16 @@ Rails.application.routes.draw do
 
   get 'confirmation', to: 'subscriptions#confirmation', as: 'confirmation'
   get 'thanks', to: 'charges#thanks', as: 'thanks'
-  get "/search" => "listings#search"
+  #get "/search" => "listings#search"
 
   root 'welcome#index'
+
+  # Adding search functionality
+  resources :listings do
+    collection do 
+      get 'search'
+    end 
+  end 
 
 
   match '/about',       to: 'pages#about',          via: :get

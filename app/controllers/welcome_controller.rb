@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @recent_listings = Listing.last(6).reverse
+    @recent_listings = Listing.last(10).reverse
 		@all_listings = Listing.all 
 		@hash = Gmaps4rails.build_markers(@all_listings) do |listing, marker|
 		  marker.lat listing.latitude

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users, controllers: { charges: "charges", subscriptions: "subscriptions"}
+  devise_for :users
   resources :contacts, only: [:new, :create]
   resources :categories
   resources :charges, only: [:new, :create]

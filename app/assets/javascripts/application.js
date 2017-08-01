@@ -13,11 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.bar.custom
+//= require_tree .
 //= require helpers
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
+
 
 document.addEventListener("turbolinks:load", function() {
   tinymce.remove();

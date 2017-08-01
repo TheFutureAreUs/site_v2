@@ -24,6 +24,11 @@ Rails.application.routes.draw do
     collection do 
       get 'search'
     end 
+    resources :reviews do 
+      member do
+        get 'userreviewpage'
+      end 
+    end 
   end 
 
 

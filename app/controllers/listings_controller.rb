@@ -4,12 +4,20 @@ class ListingsController < ApplicationController
   # makes sure random people won't be able to edit, delete, or update listings
   before_filter :is_user?, only: [:edit, :update, :delete]
 
+  def userreviewpage
+  end
+
   def new 
     @listing = Listing.new
   end
 
   def show
     @listing = Listing.find(params[:id])
+    if @listing.reviews.blank?
+      @average_review = 0
+    else 
+      @average_review = @listing.reviews.average(:rating).round(2)
+    end
   end
 
   def create

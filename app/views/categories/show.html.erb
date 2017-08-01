@@ -13,7 +13,8 @@
             <h4 class="listing-title listing-bold"><%= link_to f.title, f%></h1>
             <p class="tags"><%= raw f.tags.map { |t| link_to t.name, listings_path(tag: t.name) }.join(', ') %></p>
             <p class="listing-desc"><%= truncate(f.description, length: 130) %></p>
-            <%= link_to 'Read More', f, class: 'read-more' %><br />
+            <%= link_to "Add Review", new_listing_review_path(f) %>
+            <%= link_to 'Read More', f, class: 'read-more' %>
               <br />
               <div class="time"><%= f.created_at.strftime('%B %d, %Y') %> - (<%= f.address %>)</div>
           </div>
@@ -22,6 +23,9 @@
         <p>No listings found!</p>
       <% end %>
       <%= will_paginate @listings, previous_label: "Older", next_label: "Newer", inner_window: 2, outer_window: 0 %>
+      
+      
     </div>
   </div>
+  
 </div>

@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :stripe_customer_id
   attr_accessor :login
+  has_many :reviews
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'review.js' %>
+
 <ol class="breadcrumb breadcrumb-arrow">
 	<li><%= link_to 'Home', root_path %></li>
 	<li class="active"><%= link_to @listing.category.name, category_path(@listing.category) %></li>
@@ -11,7 +13,19 @@
   <div class="col-md-10 col-lg-8 text-xs-center">
   
     <h1><%= @listing.title %></h1>
-    <h4>posted <%= time_ago_in_words(@listing.created_at) %></h4>
+    <h3>Average Rating</h3>
+    <div class="average-review-rating" data-score="<%= @average_review %>"></div>
+    <div>
+      <%= link_to "Add Review", new_listing_review_path(@listing) %>
+    </div>
+    <span>Based on <%= @listing.reviews.count %> reviews</span><br />
+    <div>
+      <%= link_to "See Reviews", userreviewpage_listing_review_path(@listing)
+ %>
+    </div>
+    <span>posted <%= time_ago_in_words(@listing.created_at) %></span>
+    <br />
+    <br />
     <%= @listing.body.html_safe %>
 
     <div class="col-sm-6">
@@ -22,9 +36,30 @@
       </div>
     </div>
 
+    <script>
+        $('.review-rating').raty({
+          readOnly: true,
+          score: function() {
+            return $(this).attr('data-score');
+          },
+          path: '/assets/'
+        });
+    </script>
+
+    <script>
+      $('.average-review-rating').raty({
+        readOnly: true,
+        path: '/assets/',
+        score: function() {
+          return $(this).attr('data-score')
+        }
+      });
+    </script>
+
     <div id="disqus_thread">
       <%= render 'disqus' %>
     </div>
+
 
   </div>
 </div>

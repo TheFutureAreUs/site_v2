@@ -4,6 +4,8 @@ class Listing < ActiveRecord::Base
   belongs_to :college
   belongs_to :region
 
+  has_many :reviews
+
   validates_presence_of :user_id
   validates_presence_of :title
   validates_presence_of :description
@@ -16,6 +18,8 @@ class Listing < ActiveRecord::Base
   after_validation :geocode, :if => :address_changed?
 
   acts_as_taggable # Alias for acts_as_taggable_on :tags
+
+
 
 
   def self.search(params)

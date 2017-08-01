@@ -32,6 +32,8 @@ gem 'will_paginate', '~> 3.1'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'underscore-rails'
 gem 'sass', '~> 3.5'
+gem 'simple_form'
+gem 'friendly_id'
 #------------------------------------------------------------------------------------
 
 

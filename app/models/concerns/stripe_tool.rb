@@ -1,10 +1,11 @@
 module StripeTool
 
-  def self.create_membership(email: email, stripe_token: stripe_token, plan: plan)
+  def self.create_membership(email: email, stripe_token: stripe_token, plan: plan, customer_id: customer_id)
     Stripe::Customer.create(
       email: email,
       source: stripe_token,
-      plan: plan
+      plan: plan, 
+      customer: customer_id
     )
   end
 

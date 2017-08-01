@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       flash[:success] = "Successfully registered"
       redirect_to root_path
     else
-      flash[:error] = "Cannot create a user, try again"
+      flash.now[:error] = "Cannot create a user, try again"
     end 
   end
 

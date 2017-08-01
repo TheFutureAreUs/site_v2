@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  attr_accessor :stripe_customer_id
   attr_accessor :login
   has_many :reviews
+  has_many :charges
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -30,10 +30,11 @@ class User < ApplicationRecord
   #validate :validate_username
 
   #def validate_username
-    #if User.where(email: username).exists?
-      #errors.add(:username, :invalid)
+   # if User.where(email: username).exists?
+    #  errors.add(:username, :invalid)
     #end
-  #end
+ # end
+
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
@@ -47,4 +48,5 @@ class User < ApplicationRecord
       end
     end 
   end
+
 end

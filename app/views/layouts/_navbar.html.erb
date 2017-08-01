@@ -26,8 +26,12 @@
         <li>
             
         </li>
+
+        <% if current_user.has_attribute?("customer_id") %>
+          <li class="button button-list"><%= link_to "Create A Listing!", new_charge_path %></li>
+        <% end %>
+
         <% if user_signed_in? %>
-          <li class="button button-list"><%= link_to "Create A Listing!", new_listing_path %></li>
             <li class=" dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= link_to(avatar_for(current_user, size: 35), current_user) %>
             </li>
@@ -42,7 +46,6 @@
 
               <li class="dropdown-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
             </div>
-            <li class="button button-list"><%= link_to "Create A Listing!", new_listing_path %></li>
         <% else %>
             <li><%= link_to 'Sign In / Sign Up', new_user_session_path, class: 'button button-list search-bar' %>
             </li>

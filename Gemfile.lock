@@ -58,6 +58,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    cancan (1.6.10)
     carrierwave (1.1.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -227,8 +228,6 @@ GEM
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     formatador (0.2.5)
-    friendly_id (5.1.0)
-      activerecord (>= 4.0.0)
     geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -369,13 +368,13 @@ DEPENDENCIES
   acts-as-taggable-on (~> 4.0)
   bootstrap-sass (~> 3.3.6)
   byebug
+  cancan
   carrierwave
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   dotenv-rails
   fog
   font-awesome-sass (~> 4.7)
-  friendly_id
   geocoder (~> 1.4)
   gmaps4rails
   jbuilder (~> 2.5)

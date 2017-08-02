@@ -1,9 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :find_listing
   before_action :find_review, only: [:edit, :update, :destroy]
-
-  def userreviewpage
-  end
 
   def new
     @review = Review.new
@@ -42,10 +38,6 @@ class ReviewsController < ApplicationController
 
     def review_params
       params.require(:review).permit(:rating, :comment)
-    end
-
-    def find_listing
-      @listing = Listing.find(params[:listing_id])
     end
 
     def find_review 

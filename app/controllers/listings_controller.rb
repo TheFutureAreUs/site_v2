@@ -5,6 +5,7 @@ class ListingsController < ApplicationController
   before_filter :is_user?, only: [:edit, :update, :delete]
 
   def userreviewpage
+    @listing = Listing.find(params[:review_id])
   end
 
   def new 
@@ -61,7 +62,7 @@ class ListingsController < ApplicationController
   private 
 
     def listing_params
-      params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_num, :college_id, :region_id)
+      params.require(:listing).permit(:title, :description, :miles, :search, :address, :category_id, :body, :tag_list, :emails_address, :phone_num, :college_id, :region_id, :review_id)
     end
 
     def is_user?

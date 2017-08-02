@@ -20,7 +20,7 @@
     </div>
     <span>Based on <%= @listing.reviews.count %> reviews</span><br />
     <div>
-      <%= link_to "See Reviews", userreviewpage_listing_review_path(@listing)
+      <%= link_to "See Reviews", userreviewpage_path(@listing)
  %>
     </div>
     <span>posted <%= time_ago_in_words(@listing.created_at) %></span>

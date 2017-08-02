@@ -1,34 +1,77 @@
+<section id="bs-pricing-five" class="bs-pricing-five p-top-100 bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="bs-five-area bs-radius">
+        <%= form_for(resource, as: resource_name, url: charges_path(resource_name), html: { method: :post }) do |f| %>
 
-                <%= form_for(resource, as: resource_name, url: charges_path(resource_name), html: { method: :post }) do |f| %>
-                          <!-- monthly sub -->
-                  <article>
-                    <% if flash[:error].present? %>
-                      <div id="error_explanation">
-                          <p><%= flash[:error] %></p>
-                      </div>
-                    <% end %>
-
-                    <br />
-                    <br />
-
-                    <label class="li-Form-control li-Form-control--login">
-                      <strong><span>Monthly Subscription: $9.99</span></strong>
-                    </label>
-                  </article>
-
-                  <div class="form-actions">
-
-                    <%= hidden_field_tag :subscription, value: params[:subscription]='yes' %>
-                            
-                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                                    data-amount="999"
-                                    data-locale="auto">
-                                "<%= f.button :submit %>"
-                    </script>
-
-                  </div>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
               </div>
+            <% end %>
+          </article>
 
+          <div class="col-md-4 no-padding text-center">
+            <div class="bs-five">
+              <h6 class="text-uppercase">Free User</h6>
+              <h1 class="bs-caption"><sup>$</sup>00</h1>
+              <ul>
+                <li><b>View, comment, and rate listings</b></li>
+                <li>24/7 Customer Support</li>
+              </ul>
+              <%= link_to 'Go Sign Up!', new_user_session_path, class: 'btn btn-success btn-round m-top-40' %>
+            </div>
+          </div>
+          <div class="col-md-4 no-padding text-center">
+            <div class="bs-five">
+              <h6 class="text-uppercase">Standard Plan</h6>
+              <h1 class="bs-caption"><sup>$</sup>9<sup>.99/month</sup></h1>
+              <ul>
+                <li><b>Monthly Plan</b></li>
+                <li>Ability to create listings</li>
+                <li>View, comment, and rate listings</li>
+                <li>24/7 Customer Support</li>
+              </ul>
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button "
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-amount="999"
+                  data-locale="auto">
+                  "<%= f.button :submit %>"
+              </script>   
+            </div>
+          </div>
+        <% end %>
 
-                  <% end %>
+        <%= form_for(resource, as: resource_name, url: subscriptions_path(resource_name), html: { method: :post }) do |f| %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+
+            <div class="col-md-4 no-padding text-center">
+              <div class="bs-five active">
+                <h6 class="text-uppercase">Premium Plan</h6>
+                <h1 class="bs-caption"><sup>$</sup>89<sup>.99/year</sup></h1>
+                <ul>
+                  <li><b>Yearly Plan</b></li>
+                  <li>Ability to create listings</li>
+                  <li>View, comment, and rate listings</li>
+                  <li>24/7 Customer Support</li>
+                </ul>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-amount="8999"
+                    data-locale="auto">
+                    "<%= f.button :submit %>"
+                </script>
+              </div>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+                

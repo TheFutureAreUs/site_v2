@@ -13,8 +13,8 @@ class ChargesController < ApplicationController
     else
       @charge = Charge.new(params[:charge])
     end
-    respond_to do |format|        # this is line 52
-      if @charge.save_with_payment # this is line 53
+    respond_to do |format|        
+      if @charge.save_with_payment 
 
         format.html { redirect_to auctions_path, :notice => 'Your payment has been successfully processed and your credit card has been linked to your account.' }
         format.json { render json: @charge, status: :created, location: @charge }

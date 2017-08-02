@@ -8,7 +8,10 @@ class WelcomeController < ApplicationController
 		  marker.lng listing.longitude
 		  marker.infowindow "<a href='/listings/"+"#{listing.id}"+"'>#{listing.title}, #{listing.address}</a>"
 		  marker.json({ title: listing.title, id: listing.id })
-    end
-  end
+		end
+		
+		@user = User.all
+	end
+	
 
 end

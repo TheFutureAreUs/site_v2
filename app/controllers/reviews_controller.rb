@@ -1,5 +1,13 @@
 class ReviewsController < ApplicationController
+  before_action :find_listing
   before_action :find_review, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
+
+
+  def show
+    @listing = Listing.where(review_id: params[:id]).order("created_at DESC").paginate(page: params[:page], per_page: 6)
+    @review = Review.find(params[:id])
+  end
 
   def new
     @review = Review.new
@@ -42,5 +50,9 @@ class ReviewsController < ApplicationController
 
     def find_review 
       @review = Review.find(params[:id])
+    end
+
+    def find_listing
+		  @listing = Listing.find(params[:listing_id])
     end
 end

@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   get 'confirmation', to: 'subscriptions#confirmation', as: 'confirmation'
   get 'thanks', to: 'charges#thanks', as: 'thanks'
-  get 'userreviewpage', to: 'listings#userreviewpage', as: 'userreviewpage'
   #get "/search" => "listings#search"
 
   root 'welcome#index'
@@ -25,7 +24,7 @@ Rails.application.routes.draw do
     collection do 
       get 'search'
     end 
-    resources :reviews 
+    resources :reviews  
   end 
 
 

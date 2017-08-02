@@ -10,19 +10,17 @@ class Charge < ActiveRecord::Base
       self.user.update_column(:customer_id, customer.id)
       save!
 
-      Stripe::Charge.create_membership(
+      subscription = Stripe::Customer.create(
         email: email,
-        source: stripe_token,
         plan: 2002,
-        amount: 999,
         customer: customer.id
       )
+      
     end 
 
-    rescue Stripe::InvalidRequestError => e
-      logger.error "Stripe error while creating customer: #{e.message}"
-      errors.add :base, "There was a problem with your credit card."
-      false
+  rescue Stripe::CardError => e 
+    flash[:error] = e.message
+    redirect_to new_charge_path 
   end
 
 end

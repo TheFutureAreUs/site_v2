@@ -1,11 +1,20 @@
-<h1>Edit Review</h1>
+<div class="container">
+  <div class="col-md-10 col-lg-6 text-xs-center col-md-offset-3">
+    <div class="new-review">
+      
+      <h1 class="card-top-title">EDIT REVIEW</h1>
 
-<%= simple_form_for([@listing, @review]) do |f| %>
-  <div id="rating-form">
-    <label>Rating</label>
+        <%= simple_form_for([@listing, @review]) do |f| %>
+          <div id="rating-form">
+            <label>Rating</label>
+          </div>
+          <%= f.input :comment %>
+          <%= f.button :submit, class: 'btn btn-info'
+        <% end %>
+
+    </div>
   </div>
-  <%= f.input :comment %>
-<% end %>
+</div>
 
 <script>
   $('#rating-form').raty({

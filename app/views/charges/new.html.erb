@@ -61,12 +61,15 @@
                   <li>View, comment, and rate listings</li>
                   <li>24/7 Customer Support</li>
                 </ul>
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                    data-amount="8999"
-                    data-locale="auto">
-                    "<%= f.button :submit %>"
-                </script>
+                <div>
+                  <%= hidden_field_tag :subscription, value: params[:subscription] %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-amount="8999"
+                      data-locale="auto">
+                      "<%= f.button :submit %>"
+                  </script>
+                </div>
               </div>
             </div>
         <% end %>

@@ -2,6 +2,7 @@ class User < ApplicationRecord
   attr_accessor :login
   has_many :reviews
   has_many :charges
+  has_many :subscriptions
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

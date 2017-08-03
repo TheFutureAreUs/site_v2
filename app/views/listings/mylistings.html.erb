@@ -7,7 +7,11 @@
           <div class="panel-body">
             <div class="table-container">
               <div id="new_listing_button">
-                <%= link_to 'New Listing', new_listing_path, class: "btn btn-primary" %>
+                <% if current_user.customer_id.present? %>
+                  <%= link_to 'New Listing', new_listing_path, class: "btn btn-info" %>
+                <% else %>
+                  <%= link_to 'New Listing', new_charge_path, class: "btn btn-info" %>
+                <% end %>
               </div>
               <table class="table table-filter">
                 <tr>

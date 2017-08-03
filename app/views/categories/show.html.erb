@@ -20,7 +20,22 @@
           </div>
         <% end %>
       <% else %>
-        <p>No listings found!</p>
+       <div class="row">
+        <div class="col-md-6 col-md-offset-3 panel panel-default form-style">
+          <div class="panel-body">
+            <div class="sign-prof">
+              <h2 class="thanks_title">No listings found!</h2>
+              <div class="sign_text">
+                <% if current_user.customer_id.present? %>
+                  <strong><%= link_to 'NOW GO POST!', new_listing_path, class: 'thank_text' %></strong>
+                <% else %>
+                  <strong><%= link_to 'NOW GO POST!', new_charge_path, class: 'thank_text' %></strong>
+                <% end %>
+              </div>     
+            </div> 
+          </div> 
+        </div> 
+      </div>
       <% end %>
       <%= will_paginate @listings, previous_label: "Older", next_label: "Newer", inner_window: 2, outer_window: 0 %>
       

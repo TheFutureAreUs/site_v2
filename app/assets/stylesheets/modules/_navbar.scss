@@ -36,11 +36,15 @@
   margin-right: -12;
 }
 
-.nav_image {
+img.nav_image {
   width: 200px;
   height: 80px;
   padding: 0;
+  display: block;
+  margin-right: 160px;
 }
+
+
 
 .navbar-default .navbar-nav > li > a {
   color: rgb(78, 203, 252);

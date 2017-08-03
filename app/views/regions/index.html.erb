@@ -18,22 +18,46 @@
         <h3 class="alert-heading"><strong>NOTICE!</strong></h3>
         <p class="mb-0 notice-text">Not all of the colleges in the country have been added, please enter your email below in order to get updates on your college.</p>
       </div>
-      <div class="panel panel-default container">
+      <div class="container">
+        <div class="col-md-10 col-lg-6 text-xs-center col-md-offset-3">
+          <div class="new-review">    
+            <h1 class="card-top-title">GEORGIA</h1>
+
+            <div class="college_wrapper">
+              <% @georgia_colleges.colleges.each.sort_by do |college| %>
+                  <ul>
+                    <li>
+                      <%= link_to college.name, region_college_path(@georgia_colleges, college), class: 'college_names ' %>
+                    </li>
+                  </ul>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="panel panel-default container">
         <h2 class="header_college">Georgia</h2><br />
-        <div class="college_wrapper">
-          <% @georgia_colleges.colleges.each do |college| %>
-              <%= link_to college.name, region_college_path(@georgia_colleges, college), class: 'college_names ' %>
-          <% end %>
+      </div>-->
+      <div class="container">
+        <div class="col-md-10 col-lg-6 text-xs-center col-md-offset-3">
+          <div class="new-review">        
+            <h1 class="card-top-title">MARYLAND</h1>
+
+            <div class="college_wrapper">
+              <% @maryland_colleges.colleges.each.sort_by do |college| %>
+                <ul>
+                  <li>
+                    <%= link_to college.name, region_college_path(@maryland_colleges, college), class: 'college_names ' %>
+                  </li>
+                </ul>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="panel panel-default container">
+      <!--<div class="panel panel-default container">
         <h2 class="header_college">Maryland</h2><br />
-        <div class="college_wrapper">
-          <% @maryland_colleges.colleges.each do |college| %>
-              <%= link_to college.name, region_college_path(@maryland_colleges, college), class: 'college_names ' %>
-          <% end %>
-        </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>

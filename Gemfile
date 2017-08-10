@@ -34,6 +34,7 @@ gem 'underscore-rails'
 gem 'sass', '~> 3.5'
 gem 'simple_form'
 gem 'cancan'
+gem 'amcharts.rb'
 #------------------------------------------------------------------------------------
 
 

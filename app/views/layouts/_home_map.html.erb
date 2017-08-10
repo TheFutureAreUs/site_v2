@@ -1,6 +1,6 @@
 
 
-<div style='width: 100%;'>
+<!--<div style='width: 100%;'>
     <div class="map" id="map" style='width: 100%; height: 500px;'></div>
 </div>  
   
@@ -100,7 +100,206 @@
           handler.getMap().setZoom(4);
           handler.resetBounds();
         });
-    </script>  
+    </script>  -->
+<script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js" type="text/javascript"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
+<div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+<div style="width: 1000px; font-size: 70%; padding: 5px 0; text-align: center; background-color: #535364; margin-top: 1px; color: #B4B4B7;"><a href="https://www.amcharts.com/visited_states/" style="color: #B4B4B7;">Create your own visited states map</a> or check out the <a href="https://www.amcharts.com/" style="color: #B4B4B7;">JavaScript Charts</a>.</div>
+
+<script type="text/javascript">
+    var map = AmCharts.makeChart("mapdiv",{
+        type: "map",
+        theme: "light",
+        panEventsEnabled : true,
+        backgroundColor : "#535364",
+        backgroundAlpha : 1,
+        zoomControl: {
+        zoomControlEnabled : true
+        },
+        dataProvider : {
+        map : "usaHigh",
+        getAreasFromMap : true,
+        areas : [
+            { "id":"US-DE",
+              "info": ""
+            }, 
+            { "id":"US-DC", 
+              "info": ""
+            },
+            { "id":"US-FL",
+              "info": ""
+            },
+            { "id":"US-GA",
+              "info": ""
+            },
+            { "id":"US-HI",
+              "info": ""
+            },
+            { "id":"US-ID",
+              "info": ""
+            },
+            { "id":"US-IL",
+              "info": ""
+            },
+            { "id":"US-IN",
+              "info": ""
+            },
+            { "id":"US-IA",
+              "info": ""
+            },
+            { "id":"US-KS",
+              "info": ""
+            },
+            { "id":"US-KY",
+              "info": ""
+            },
+            { "id":"US-LA",
+              "info": ""
+            },
+            { "id":"US-ME",
+              "info": ""
+            }, 
+            { "id":"US-MD",
+              "info": "<%=  @maryland_colleges.colleges.map { |college| college.name }.join.html_safe %>"
+            },
+            { "id":"US-MA",
+              "info": ""
+            },
+            { "id":"US-MI",
+              "info": ""
+            },
+            { "id":"US-MN",
+              "info": "" 
+            },
+            { "id":"US-MS",
+              "info": ""
+            },
+            { "id":"US-MO",
+              "info": ""
+            },
+            { "id":"US-MT",
+              "info": ""
+            },
+            { "id":"US-NE",
+              "info": ""
+            },
+            { "id":"US-NV",
+              "info": ""
+            },
+            { "id":"US-NH",
+              "info": ""
+            },
+            { "id":"US-NJ", 
+              "info": ""
+            },
+            { "id":"US_NM",
+              "info": ""
+            },
+            { "id":"US-NY",
+              "info": ""
+            },
+            { "id":"US-NC",
+              "info": ""
+            },
+            { "id":"US-ND",
+              "info": ""
+            },
+            { "id":"US-OH",
+              "info": ""
+            },
+            { "id":"US-OK",
+              "info": ""
+            },
+            { "id":"US-OR",
+              "info": ""
+            },
+            { "id":"US-PA",
+              "info": ""
+            },
+            { "id":"US-RI",
+              "info": ""
+            },
+            { "id":"US-SC",
+              "info": ""
+            },
+            { "id":"US-SD",
+              "info": ""
+            },
+            { "id":"US-TN",
+              "info": ""
+            },
+            { "id":"US-TX",
+              "info": ""
+            },
+            { "id":"US-UT",
+              "info": ""
+            },
+            { "id":"US-VT",
+              "info": ""
+            },
+            { "id":"US-VA",
+              "info": ""
+            },
+            { "id":"US-WA",
+              "info": ""
+            },
+            { "id":"US-WV",
+              "info": ""
+            },
+            { "id":"US-WI",
+              "info": ""
+            },
+            { "id":"US-WY",
+              "info": ""
+            },
+            { "id":"US-AK",
+              "info": ""
+            },
+            { "id":"US-AL",
+              "info": ""
+            },
+            { "id":"US-AR",
+              "info": ""
+            },
+            { "id":"US-AZ",
+              "info": ""
+            },
+            { "id":"US-CA",
+              "info": "Hello Map"
+            },
+            { "id":"US-CO",
+              "info": ""
+            },
+            { "id":"US-CT",
+              "info": ""
+            }
+            ]
+        }, 
+        areasSettings : {
+            autoZoom : false,
+            selectable: true,
+            color : "#B4B4B7",
+            colorSolid : "#84ADE9",
+            selectedColor : "#84ADE9",
+            outlineColor : "#666666",
+            rollOverColor : "#9EC2F7",
+            rollOverOutlineColor : "#000000"
+        },
+        
+        "listeners": [ {
+            "event": "clickMapObject",
+            "method": function( event ) {
+            document.getElementById( "info" ).innerHTML = '<p><b>' + event.mapObject.title + '</b></p><p>' + event.mapObject.info + '</p>';
+            }
+        } ]
+    
+    });
+</script>
+
+
+
+
 
 
 

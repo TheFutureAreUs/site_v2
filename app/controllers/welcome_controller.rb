@@ -1,16 +1,11 @@
 class WelcomeController < ApplicationController
 
   def index
-    @recent_listings = Listing.last(10).reverse
-		@all_listings = Listing.all 
-		@hash = Gmaps4rails.build_markers(@all_listings) do |listing, marker|
-		  marker.lat listing.latitude
-		  marker.lng listing.longitude
-		  marker.infowindow "<a href='/listings/"+"#{listing.id}"+"'>#{listing.title}, #{listing.address}</a>"
-		  marker.json({ title: listing.title, id: listing.id })
-		end
+    @regions = Region.all
+    @maryland_colleges = @regions[0]
+		@georgia_colleges = @regions[1]
 		
-		@user = User.all
+		@colleges = College.order(:name)
 	end
 	
 

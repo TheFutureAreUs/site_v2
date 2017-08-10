@@ -131,7 +131,7 @@
               "info": ""
             },
             { "id":"US-GA",
-              "info": ""
+              "info": "<%=  @georgia_colleges.colleges.map { |college| college.name }.join.html_safe %>"
             },
             { "id":"US-HI",
               "info": ""
@@ -266,7 +266,7 @@
               "info": ""
             },
             { "id":"US-CA",
-              "info": "Hello Map"
+              "info": ""
             },
             { "id":"US-CO",
               "info": ""
@@ -290,7 +290,7 @@
         "listeners": [ {
             "event": "clickMapObject",
             "method": function( event ) {
-            document.getElementById( "info" ).innerHTML = '<p><b>' + event.mapObject.title + '</b></p><p>' + event.mapObject.info + '</p>';
+                document.getElementById( "info" ).innerHTML = '<p><b>' + event.mapObject.title + '</b></p><p>' + event.mapObject.info + '</p>';
             }
         } ]
     

@@ -42,8 +42,9 @@ a {
 
 .side-scroll {
   width: 500;
+  height: 300px;
   overflow-x: scroll;
-  white-space: nowrap;
+  //white-space: nowrap;
   max-width: 2000px;
   max-height: 800px;
   text-align: center;
@@ -246,6 +247,21 @@ h1 {
   border-radius: 3px;
   text-align: left;
   margin-top: 50px;
+}
+
+.dis-sidebar {
+  margin-left: 850px;
+  //right: 0;
+  background: rgba(255, 255, 255, 0.85);
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1000;
+  //padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  text-align: left;
 }
 
 .cars {

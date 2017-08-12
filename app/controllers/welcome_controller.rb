@@ -11,7 +11,9 @@ class WelcomeController < ApplicationController
     @texas_colleges = @regions[6]
 		
 		@colleges = College.order(params[:name])
-	end
-	
+  end
+
+  def new
+  end
 
 end

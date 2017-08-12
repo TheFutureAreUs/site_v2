@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Successfully registered"
-      redirect_to root_path
+      flash.now[:success] = "Successfully registered"
+      redirect_to new_welcome_path
     else
       flash.now[:error] = "Cannot create a user, try again"
     end 

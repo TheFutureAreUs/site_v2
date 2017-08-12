@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   resources :contacts, only: [:new, :create]
   resources :categories
   resources :charges
   resources :subscriptions, only: [:new, :create]
   resources :users
+  resources :welcome, only: [:new]
+
 
 
   resources :regions do

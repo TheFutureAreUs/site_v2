@@ -25,10 +25,10 @@
               "info": ""
             },
             { "id":"US-FL",
-              "info": ""
+              "info": '<%  @florida_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@florida_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-GA",
-              "info": "<%=  @georgia_colleges.colleges.map { |college| college.name }.join.html_safe %>"
+              "info": '<%  @georgia_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@georgia_colleges, college) %></li></ul> <% end %>' 
             },
             { "id":"US-HI",
               "info": ""
@@ -82,7 +82,7 @@
               "info": ""
             },
             { "id":"US-NV",
-              "info": ""
+              "info": '<%  @nevada_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@nevada_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-NH",
               "info": ""
@@ -127,7 +127,7 @@
               "info": ""
             },
             { "id":"US-TX",
-              "info": ""
+              "info": '<%  @texas_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@texas_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-UT",
               "info": ""
@@ -160,10 +160,10 @@
               "info": ""
             },
             { "id":"US-AZ",
-              "info": ""
+              "info": '<%  @arizona_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@arizona_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-CA",
-              "info": ""
+              "info": '<%  @california_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@california_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-CO",
               "info": ""

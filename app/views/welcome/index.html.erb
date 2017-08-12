@@ -7,7 +7,7 @@
         <h2 class="college-top-title">CHOOSE YOUR SCHOOL</h2>
         <div class="alert alert-warning alt-container college-notice" role="alert">
           <p class="alert-heading"><strong>NOTICE!</strong></p>
-          <p class="mb-0 notice-text">Not all of the colleges in the country have been added,<br /> please subscribe to our mailing list below in the footer<br /> in order to get updates on your college.</p>
+          <p class="mb-0 notice-text">Not all of the colleges in the country have been added, either <%= link_to 'contact us', new_contact_path %> or please subscribe to our mailing list below in the footer in order to get updates on your college.</p>
         </div>
         <div class=" state-div wel-side-scroll row"  style="width:100%">
           <div class="scroll-pane">
@@ -41,7 +41,7 @@
             <h2 class="map_search card-top-title">FIND A LISTING</h2>
           </div>
         <%= form_tag( search_listings_path, method: :get, class: "") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search your school", class: "button button-list search-bar well well-transparent" %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search listings", class: "button button-list search-bar well well-transparent" %>
 
           <%= submit_tag "Find Listings", name: nil, :class => "button button-list search-bar well well-transparent" %>
         <% end %>

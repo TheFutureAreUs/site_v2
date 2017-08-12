@@ -23,10 +23,44 @@ other_category = Category.where(name: 'other').first_or_create(name: 'other')
 #------------------------------------------------------------------------
 
 # Colleges and Universities----------------------------------------------
+arizona_colleges = Region.where(name: 'Arizona Colleges/Universities').first_or_create(name: 'Arizona Colleges/Universities') 
+
+california_colleges = Region.where(name: 'California Colleges/Universities').first_or_create(name: 'California Colleges/Universities') 
+
+florida_colleges = Region.where(name: 'Florida Colleges/Universities').first_or_create(name: 'Florida Colleges/Universities')
+
+georgia_colleges = Region.where(name: 'Georgia Colleges/Universities').first_or_create(name: 'Georgia Colleges/Universities')
 
 maryland_colleges = Region.where(name: 'Maryland Colleges/Universities').first_or_create(name: 'Maryland Colleges/Universities')
 
-georgia_colleges = Region.where(name: 'Georgia Colleges/Universities').first_or_create(name: 'Georgia Colleges/Universities')
+nevada_colleges = Region.where(name: 'Nevada Colleges/Universities').first_or_create(name: 'Nevada Colleges/Universities')
+
+texas_colleges = Region.where(name: 'Texas Colleges/Universities').first_or_create(name: 'Texas Colleges/Universities')
+
+# Nevada-----------------------------------------------------------------
+College.where(name: 'University of Nevada, Las Vegas', region_id: nevada_colleges.id).first_or_create(name: 'University of Nevada, Las Vegas', region_id: nevada_colleges.id)
+College.where(name: 'College of Southern Nevada', region_id: nevada_colleges.id).first_or_create(name: 'College of Southern Nevada', region_id: nevada_colleges.id)
+College.where(name: 'University of Nevada, Reno', region_id: nevada_colleges.id).first_or_create(name: 'University of Nevada, Reno', region_id: nevada_colleges.id)
+
+# Arizona----------------------------------------------------------------
+College.where(name: 'Arizona State University', region_id: arizona_colleges.id).first_or_create(name: 'Arizona State University', region_id: arizona_colleges.id)
+College.where(name: 'Northern Arizona University', region_id: arizona_colleges.id).first_or_create(name: 'Northern Arizona University', region_id: arizona_colleges.id)
+College.where(name: 'University of Arizona', region_id: arizona_colleges.id).first_or_create(name: 'University of Arizona', region_id: arizona_colleges.id)
+
+# Florida----------------------------------------------------------------
+College.where(name: 'Florida State University', region_id: florida_colleges.id).first_or_create(name: 'Florida State University', region_id: florida_colleges.id)
+College.where(name: 'Florida Atlantic University', region_id: florida_colleges.id).first_or_create(name: 'Florida Atlantic University', region_id: florida_colleges.id)
+College.where(name: 'University of Florida', region_id: florida_colleges.id).first_or_create(name: 'University of Florida', region_id: florida_colleges.id)
+
+# Texas------------------------------------------------------------------
+College.where(name: 'University of Houston', region_id: texas_colleges.id).first_or_create(name: 'University of Houston', region_id: texas_colleges.id)
+College.where(name: 'Texas A&M University', region_id: texas_colleges.id).first_or_create(name: 'Texas A&M University', region_id: texas_colleges.id)
+College.where(name: 'Texas Tech University', region_id: texas_colleges.id).first_or_create(name: 'Texas Tech University', region_id: texas_colleges.id)
+
+# California-------------------------------------------------------------
+College.where(name: 'University of California, Berkeley', region_id: california_colleges.id).first_or_create(name: 'University of California, Berkeley', region_id: california_colleges.id)
+College.where(name: 'University of California, Los Angeles', region_id: california_colleges.id).first_or_create(name: 'University of California, Los Angeles', region_id: california_colleges.id)
+College.where(name: 'University of Southern California', region_id: california_colleges.id).first_or_create(name: 'University of Southern California', region_id: california_colleges.id)
 
 # Maryland---------------------------------------------------------------
 College.where(name: 'Bowie State University', region_id: maryland_colleges.id).first_or_create(name: 'Bowie State University', region_id: maryland_colleges.id)

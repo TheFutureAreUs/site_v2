@@ -330,3 +330,35 @@ h1 {
   letter-spacing: 1px;
 }
 
+.alt-container {
+  width: 250px;
+  margin-left: 15px;
+}
+
+div.state-div {
+  min-height: 270px;
+  position: absolute;
+  list-style-type: none;
+}
+
+div.state-div ul.sch-col li a {
+  display: block;
+  padding: 10px 0px;
+  text-decoration: none;
+  list-style-type: none;
+  border-bottom: 1px solid rgb(159, 159, 160);
+}
+
+div.scroll-pane {
+  overflow: auto;
+}
+
+ul.sch-col { list-style-type: none; }
+
+
+li.sch-col { list-style-type: none; }
+
+.sch-col {
+  text-align: center;
+  margin-left: -30px
+}

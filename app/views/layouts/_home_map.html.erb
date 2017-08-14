@@ -52,7 +52,7 @@
               "info": ""
             },
             { "id":"US-LA",
-              "info": ""
+              "info": '<%  @louisiana_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@louisiana_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-ME",
               "info": ""
@@ -70,7 +70,7 @@
               "info": "" 
             },
             { "id":"US-MS",
-              "info": ""
+              "info": '<%  @mississippi_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@mississippi_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-MO",
               "info": ""
@@ -97,7 +97,7 @@
               "info": ""
             },
             { "id":"US-NC",
-              "info": ""
+              "info": '<%  @northcarolina_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@northcarolina_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-ND",
               "info": ""
@@ -106,25 +106,25 @@
               "info": ""
             },
             { "id":"US-OK",
-              "info": ""
+              "info": '<%  @oklahoma_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@oklahoma_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-OR",
               "info": ""
             },
             { "id":"US-PA",
-              "info": ""
+              "info": '<%  @pennsylvania_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@pennsylvania_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-RI",
               "info": ""
             },
             { "id":"US-SC",
-              "info": ""
+              "info": '<%  @southcarolina_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@southcarolina_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-SD",
               "info": ""
             },
             { "id":"US-TN",
-              "info": ""
+              "info": '<%  @tennessee_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@tennessee_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-TX",
               "info": '<%  @texas_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@texas_colleges, college) %></li></ul> <% end %>'
@@ -136,13 +136,13 @@
               "info": ""
             },
             { "id":"US-VA",
-              "info": ""
+              "info": '<%  @virginia_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@virginia_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-WA",
               "info": ""
             },
             { "id":"US-WV",
-              "info": ""
+              "info": '<%  @westvirginia_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@westvirginia_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-WI",
               "info": ""
@@ -157,7 +157,7 @@
               "info": ""
             },
             { "id":"US-AR",
-              "info": ""
+              "info": '<%  @arkansas_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@arkansas_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-AZ",
               "info": '<%  @arizona_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@arizona_colleges, college) %></li></ul> <% end %>'

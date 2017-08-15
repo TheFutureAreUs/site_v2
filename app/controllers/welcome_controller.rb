@@ -19,6 +19,13 @@ class WelcomeController < ApplicationController
     @tennessee_colleges = @regions[14]
     @virginia_colleges = @regions[15]
     @westvirginia_colleges = @regions[16]
+    @newjersey_colleges = @regions[17]
+    @washington_colleges = @regions[18]
+    @oregon_colleges = @regions[19]
+    @newmexico_colleges = @regions[20]
+    @delaware_colleges = @regions[21]
+    @kentucky_colleges = @regions[22]
+    @alabama_colleges = @regions[23]
 		
 		@colleges = College.order(params[:name])
   end

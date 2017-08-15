@@ -34,19 +34,19 @@
               "info": ""
             },
             { "id":"US-ID",
-              "info": ""
+              "info": '<% @idaho_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@idaho_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-IL",
-              "info": ""
+              "info": '<% @illinois_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@illinois_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-IN",
-              "info": ""
+              "info": '<% @indiana_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@indiana_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-IA",
               "info": ""
             },
             { "id":"US-KS",
-              "info": ""
+              "info": '<%  @kansas_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@kansas_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-KY",
               "info": '<%  @kentucky_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@kentucky_colleges, college) %></li></ul> <% end %>'
@@ -55,7 +55,7 @@
               "info": '<%  @louisiana_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@louisiana_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-ME",
-              "info": ""
+              "info": '<% @maine_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@maine_colleges, college) %></li></ul> <% end %>'
             }, 
             { "id":"US-MD",
               "info": '<%  @maryland_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@maryland_colleges, college) %></li></ul> <% end %>'
@@ -64,7 +64,7 @@
               "info": ""
             },
             { "id":"US-MI",
-              "info": ""
+              "info": '<% @michigan_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@michigan_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-MN",
               "info": "" 
@@ -73,7 +73,7 @@
               "info": '<%  @mississippi_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@mississippi_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-MO",
-              "info": ""
+              "info": '<% @missouri_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@missouri_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-MT",
               "info": ""
@@ -94,7 +94,7 @@
               "info": '<%  @newmexico_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@newmexico_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-NY",
-              "info": ""
+              "info": '<% @newyork_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@newyork_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-NC",
               "info": '<%  @northcarolina_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@northcarolina_colleges, college) %></li></ul> <% end %>'
@@ -103,7 +103,7 @@
               "info": ""
             },
             { "id":"US-OH",
-              "info": ""
+              "info": '<% @ohio_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@ohio_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-OK",
               "info": '<%  @oklahoma_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@oklahoma_colleges, college) %></li></ul> <% end %>'
@@ -145,7 +145,7 @@
               "info": '<%  @westvirginia_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@westvirginia_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-WI",
-              "info": ""
+              "info": '<% @wisconsin_colleges.colleges.each.sort_by do |college| %> <ul class="sch-col"><li><%= link_to college.name, region_college_path(@wisconsin_colleges, college) %></li></ul> <% end %>'
             },
             { "id":"US-WY",
               "info": ""

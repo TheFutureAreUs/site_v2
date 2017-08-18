@@ -25,11 +25,17 @@ other_category = Category.where(name: 'other').first_or_create(name: 'other')
 # Colleges and Universities----------------------------------------------
 alabama_colleges = Region.where(name: 'Alabama Colleges/Universities').first_or_create(name: 'Alabama Colleges/Universities') 
 
+alaska_colleges = Region.where(name: 'Alaska Colleges/Universities').first_or_create(name: 'Alaska Colleges/Universities') 
+
 arizona_colleges = Region.where(name: 'Arizona Colleges/Universities').first_or_create(name: 'Arizona Colleges/Universities') 
 
 arkansas_colleges = Region.where(name: 'Arkansas Colleges/Universities').first_or_create(name: 'Arkansas Colleges/Universities') 
 
 california_colleges = Region.where(name: 'California Colleges/Universities').first_or_create(name: 'California Colleges/Universities') 
+
+colorado_colleges = Region.where(name: 'Colorado Colleges/Universities').first_or_create(name: 'Colorado Colleges/Universities') 
+
+connecticut_colleges = Region.where(name: 'Connecticut Colleges/Universities').first_or_create(name: 'Connecticut Colleges/Universities')
 
 delaware_colleges = Region.where(name: 'Delaware Colleges/Universities').first_or_create(name: 'Delaware Colleges/Universities') 
 
@@ -43,6 +49,8 @@ indiana_colleges = Region.where(name: 'Indiana Colleges/Universities').first_or_
 
 illinois_colleges = Region.where(name: 'Illinois Colleges/Universities').first_or_create(name: 'Illinois Colleges/Universities')
 
+iowa_colleges = Region.where(name: 'Iowa Colleges/Universities').first_or_create(name: 'Iowa Colleges/Universities')
+
 kansas_colleges = Region.where(name: 'Kansas Colleges/Universities').first_or_create(name: 'Kansas Colleges/Universities')
 
 kentucky_colleges = Region.where(name: 'Kentucky Colleges/Universities').first_or_create(name: 'Kentucky Colleges/Universities')
@@ -53,11 +61,17 @@ maine_colleges = Region.where(name: 'Maine Colleges/Universities').first_or_crea
 
 maryland_colleges = Region.where(name: 'Maryland Colleges/Universities').first_or_create(name: 'Maryland Colleges/Universities')
 
+massachusetts_colleges = Region.where(name: 'Massachusetts Colleges/Universities').first_or_create(name: 'Massachusetts Colleges/Universities')
+
 michigan_colleges = Region.where(name: 'Michigan Colleges/Universities').first_or_create(name: 'Michigan Colleges/Universities')
+
+minnesota_colleges = Region.where(name: 'Minnesota Colleges/Universities').first_or_create(name: 'Minnesota Colleges/Universities')
 
 mississippi_colleges = Region.where(name: 'Mississippi Colleges/Universities').first_or_create(name: 'Mississippi Colleges/Universities')
 
 missouri_colleges = Region.where(name: 'Missouri Colleges/Universities').first_or_create(name: 'Missouri Colleges/Universities')
+
+montana_colleges = Region.where(name: 'Montana Colleges/Universities').first_or_create(name: 'Montana Colleges/Universities')
 
 nevada_colleges = Region.where(name: 'Nevada Colleges/Universities').first_or_create(name: 'Nevada Colleges/Universities')
 
@@ -83,13 +97,89 @@ tennessee_colleges = Region.where(name: 'Tennessee Colleges/Universities').first
 
 texas_colleges = Region.where(name: 'Texas Colleges/Universities').first_or_create(name: 'Texas Colleges/Universities')
 
+utah_colleges = Region.where(name: 'Utah Colleges/Universities').first_or_create(name: 'Utah Colleges/Universities')
+
 virginia_colleges = Region.where(name: 'Virginia Colleges/Universities').first_or_create(name: 'Virginia Colleges/Universities')
 
 washington_colleges = Region.where(name: 'Washington Colleges/Universities').first_or_create(name: 'Washington Colleges/Universities')
 
+washingtondc_colleges = Region.where(name: 'Washington D.C. Colleges/Universities').first_or_create(name: 'Washington D.C. Colleges/Universities')
+
 westvirginia_colleges = Region.where(name: 'West Virginia Colleges/Universities').first_or_create(name: 'West Virginia Colleges/Universities')
 
 wisconsin_colleges = Region.where(name: 'Wisconsin Colleges/Universities').first_or_create(name: 'Wisconsin Colleges/Universities')
+
+wyoming_colleges = Region.where(name: 'Wyoming Colleges/Universities').first_or_create(name: 'Wyoming Colleges/Universities')
+
+# Connecticut-------------------------------------------------------------
+College.where(name: 'Eastern Connecticut State University', region_id: connecticut_colleges.id).first_or_create(name: 'Eastern Connecticut State University', region_id: connecticut_colleges.id)
+College.where(name: 'University of Connecticut', region_id: connecticut_colleges.id).first_or_create(name: 'University of Connecticut', region_id: connecticut_colleges.id)
+College.where(name: 'University of New Haven', region_id: connecticut_colleges.id).first_or_create(name: 'University of New Haven', region_id: connecticut_colleges.id)
+College.where(name: 'Connecticut College', region_id: connecticut_colleges.id).first_or_create(name: 'Connecticut College', region_id: connecticut_colleges.id)
+College.where(name: 'Southern Connecticut State University', region_id: connecticut_colleges.id).first_or_create(name: 'Southern Connecticut State University', region_id: connecticut_colleges.id)
+
+# Iowa-------------------------------------------------------------
+College.where(name: 'Iowa State University', region_id: iowa_colleges.id).first_or_create(name: 'Iowa State University', region_id: iowa_colleges.id)
+College.where(name: 'University of Iowa', region_id: iowa_colleges.id).first_or_create(name: 'University of Iowa', region_id: iowa_colleges.id)
+College.where(name: 'University of Northern Iowa', region_id: iowa_colleges.id).first_or_create(name: 'University of Northern Iowa', region_id: iowa_colleges.id)
+College.where(name: 'Upper Iowa University', region_id: iowa_colleges.id).first_or_create(name: 'Upper Iowa University', region_id: iowa_colleges.id)
+College.where(name: 'Des Moines Area Community College', region_id: iowa_colleges.id).first_or_create(name: 'Des Moines Area Community College', region_id: iowa_colleges.id)
+
+# Massachusetts-------------------------------------------------------------
+College.where(name: 'Boston College', region_id: massachusetts_colleges.id).first_or_create(name: 'Boston College', region_id: massachusetts_colleges.id)
+College.where(name: 'Boston University', region_id: massachusetts_colleges.id).first_or_create(name: 'Boston University', region_id: massachusetts_colleges.id)
+College.where(name: 'Harvard University', region_id: massachusetts_colleges.id).first_or_create(name: 'Harvard University', region_id: massachusetts_colleges.id)
+College.where(name: 'Massachusetts Institute of Technology', region_id: massachusetts_colleges.id).first_or_create(name: 'Massachusetts Institute of Technology', region_id: massachusetts_colleges.id)
+College.where(name: 'Northeastern University', region_id: massachusetts_colleges.id).first_or_create(name: 'Northeastern University', region_id: massachusetts_colleges.id)
+
+# Washington D.C.-------------------------------------------------------------
+College.where(name: 'American University', region_id: washingtondc_colleges.id).first_or_create(name: 'American University', region_id: washingtondc_colleges.id)
+College.where(name: 'Catholic University of America', region_id: washingtondc_colleges.id).first_or_create(name: 'Catholic University of America', region_id: washingtondc_colleges.id)
+College.where(name: 'George Washington University', region_id: washingtondc_colleges.id).first_or_create(name: 'George Washington University	', region_id: washingtondc_colleges.id)
+College.where(name: 'Georgetown University', region_id: washingtondc_colleges.id).first_or_create(name: 'Georgetown University', region_id: washingtondc_colleges.id)
+College.where(name: 'Howard University', region_id: washingtondc_colleges.id).first_or_create(name: 'Howard University', region_id: washingtondc_colleges.id)
+
+# Minnesota-------------------------------------------------------------
+College.where(name: 'Minnesota State University, Mankato', region_id: minnesota_colleges.id).first_or_create(name: 'Minnesota State University, Mankato', region_id: minnesota_colleges.id)
+College.where(name: 'Minnesota State University Moorhead', region_id: minnesota_colleges.id).first_or_create(name: 'Minnesota State University Moorhead', region_id: minnesota_colleges.id)
+College.where(name: 'St. Cloud State University', region_id: minnesota_colleges.id).first_or_create(name: 'St. Cloud State University', region_id: minnesota_colleges.id)
+College.where(name: 'University of Minnesota Duluth', region_id: minnesota_colleges.id).first_or_create(name: 'University of Minnesota Duluth', region_id: minnesota_colleges.id)
+College.where(name: 'University of Minnesota, Twin Cities', region_id: minnesota_colleges.id).first_or_create(name: 'University of Minnesota, Twin Cities', region_id: minnesota_colleges.id)
+
+# Alaska-------------------------------------------------------------
+College.where(name: 'Alaska Pacific University', region_id: alaska_colleges.id).first_or_create(name: 'Alaska Pacific University', region_id: alaska_colleges.id)
+College.where(name: 'Prince William Sound College', region_id: alaska_colleges.id).first_or_create(name: 'Prince William Sound College', region_id: alaska_colleges.id)
+College.where(name: 'Kodiak College', region_id: alaska_colleges.id).first_or_create(name: 'Kodiak College', region_id: alaska_colleges.id)
+College.where(name: 'Alaska Bible College', region_id: alaska_colleges.id).first_or_create(name: 'Alaska Bible College', region_id: alaska_colleges.id)
+College.where(name: 'Kenai Peninsula College', region_id: alaska_colleges.id).first_or_create(name: 'Kenai Peninsula College', region_id: alaska_colleges.id)
+
+# Montana-------------------------------------------------------------
+College.where(name: 'University of Montana', region_id: montana_colleges.id).first_or_create(name: 'University of Montana', region_id: montana_colleges.id)
+College.where(name: 'University of Montana Western', region_id: montana_colleges.id).first_or_create(name: 'University of Montana Western', region_id: montana_colleges.id)
+College.where(name: 'Carroll College', region_id: montana_colleges.id).first_or_create(name: 'Carroll College', region_id: montana_colleges.id)
+College.where(name: 'Rocky Mountain College', region_id: montana_colleges.id).first_or_create(name: 'Rocky Mountain College', region_id: montana_colleges.id)
+College.where(name: 'City College at Montana State University Billings', region_id: montana_colleges.id).first_or_create(name: 'City College at Montana State University Billings', region_id: montana_colleges.id)
+
+# Wyoming-------------------------------------------------------------
+College.where(name: 'University of Wyoming', region_id: wyoming_colleges.id).first_or_create(name: 'University of Wyoming', region_id: wyoming_colleges.id)
+College.where(name: 'Casper College', region_id: wyoming_colleges.id).first_or_create(name: 'Casper College', region_id: wyoming_colleges.id)
+College.where(name: 'Laramie County Community College', region_id: wyoming_colleges.id).first_or_create(name: 'Laramie County Community College', region_id: wyoming_colleges.id)
+College.where(name: 'Sheridan College', region_id: wyoming_colleges.id).first_or_create(name: 'Sheridan College', region_id: wyoming_colleges.id)
+College.where(name: 'Western Wyoming Community College', region_id: wyoming_colleges.id).first_or_create(name: 'Western Wyoming Community College', region_id: wyoming_colleges.id)
+
+# Colorado-------------------------------------------------------------
+College.where(name: 'Adams State University', region_id: colorado_colleges.id).first_or_create(name: 'Adams State University', region_id: colorado_colleges.id)
+College.where(name: 'Colorado Mesa University', region_id: colorado_colleges.id).first_or_create(name: 'Colorado Mesa University', region_id: colorado_colleges.id)
+College.where(name: 'Colorado State University', region_id: colorado_colleges.id).first_or_create(name: 'Colorado State University', region_id: colorado_colleges.id)
+College.where(name: 'University of Colorado Boulder', region_id: colorado_colleges.id).first_or_create(name: 'University of Colorado Boulder', region_id: colorado_colleges.id)
+College.where(name: 'Colorado Mountain College', region_id: colorado_colleges.id).first_or_create(name: 'Colorado Mountain College', region_id: colorado_colleges.id)
+
+# Utah-------------------------------------------------------------
+College.where(name: 'University of Utah', region_id: utah_colleges.id).first_or_create(name: 'University of Utah', region_id: utah_colleges.id)
+College.where(name: 'Utah State University', region_id: utah_colleges.id).first_or_create(name: 'Utah State University', region_id: utah_colleges.id)
+College.where(name: 'Dixie State University', region_id: utah_colleges.id).first_or_create(name: 'Dixie State University', region_id: utah_colleges.id)
+College.where(name: 'Brigham Young University', region_id: utah_colleges.id).first_or_create(name: 'Brigham Young University', region_id: utah_colleges.id)
+College.where(name: 'Snow College', region_id: utah_colleges.id).first_or_create(name: 'Snow College', region_id: utah_colleges.id)
 
 # Idaho-------------------------------------------------------------
 College.where(name: 'Boise State University', region_id: idaho_colleges.id).first_or_create(name: 'Boise State University', region_id: idaho_colleges.id)

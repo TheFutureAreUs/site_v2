@@ -30,7 +30,7 @@
             <li>Select the school</li>
             <li>Check out our <%= link_to 'pricing plans', new_charge_path %></li>
             <li>Sign in/ Sign up with School email required (.edu)</li>
-            <li>Post a listing, refer a friend, give a rating, or search for a service!</li>
+            <li>Post your service, refer a friend, give a rating, or search for a service!</li>
           </ul>
         
       </div>
@@ -38,12 +38,12 @@
     <aside class="col-md-4 main-sidebar">
       <div class="ey_nav_div">
           <div class="explore-topics">
-            <h2 class="map_search card-top-title">FIND A LISTING</h2>
+            <h2 class="map_search card-top-title">FIND A SERVICE</h2>
           </div>
         <%= form_tag( search_listings_path, method: :get, class: "") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search listings", class: "button button-list search-bar well well-transparent" %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search services", class: "button button-list search-bar well well-transparent" %>
 
-          <%= submit_tag "Find Listings", name: nil, :class => "button button-list search-bar well well-transparent" %>
+          <%= submit_tag "Find Service", name: nil, :class => "button button-list search-bar well well-transparent" %>
         <% end %>
       </div>
     </aside>

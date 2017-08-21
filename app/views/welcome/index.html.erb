@@ -35,18 +35,6 @@
         
       </div>
     </aside>
-    <aside class="col-md-4 main-sidebar">
-      <div class="ey_nav_div">
-          <div class="explore-topics">
-            <h2 class="map_search card-top-title">FIND A SERVICE</h2>
-          </div>
-        <%= form_tag( search_listings_path, method: :get, class: "") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search services", class: "button button-list search-bar well well-transparent" %>
-
-          <%= submit_tag "Find Service", name: nil, :class => "button button-list search-bar well well-transparent" %>
-        <% end %>
-      </div>
-    </aside>
     
         <%= render "layouts/home_map" %>
     

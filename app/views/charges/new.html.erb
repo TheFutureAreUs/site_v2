@@ -26,7 +26,7 @@
           <div class="col-md-4 no-padding text-center">
             <div class="bs-five">
               <h6 class="text-uppercase">Standard Plan</h6>
-              <h1 class="bs-caption"><sup>$</sup>9<sup>.99/month</sup></h1>
+              <h1 class="bs-caption"><sup>$</sup>4<sup>.99/month</sup></h1>
               <ul>
                 <li><b>Monthly Plan</b></li>
                 <li>Ability to create listings</li>
@@ -35,7 +35,7 @@
               </ul>
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button "
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-amount="999"
+                  data-amount="499"
                   data-locale="auto">
                   "<%= f.button :submit %>"
               </script>   
@@ -54,7 +54,7 @@
             <div class="col-md-4 no-padding text-center">
               <div class="bs-five active">
                 <h6 class="text-uppercase">Premium Plan</h6>
-                <h1 class="bs-caption"><sup>$</sup>89<sup>.99/year</sup></h1>
+                <h1 class="bs-caption"><sup>$</sup>49<sup>.99/year</sup></h1>
                 <ul>
                   <li><b>Yearly Plan</b></li>
                   <li>Ability to create listings</li>
@@ -65,7 +65,7 @@
                   <%= hidden_field_tag :subscription, value: params[:subscription] %>
                   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-amount="8999"
+                      data-amount="4999"
                       data-locale="auto">
                       "<%= f.button :submit %>"
                   </script>

@@ -7,7 +7,6 @@
   
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= image_tag  "TheFutureAreUs.jpg", class: 'nav_image' %></li>
         <!--<li><%= link_to "Search By College", regions_path, class: 'button button-list search-bar' %></li>-->
      
 
@@ -16,7 +15,7 @@
             <% if current_user.customer_id.present? %>
               <li class="button button-list"><%= link_to "Post Your Service!", new_listing_path %></li>
             <% else %>
-              <li class="button button-list"><%= link_to "Post Your Service", new_charge_path %></li>
+              <li class="button button-list"><%= link_to "Post Your Service", new_listing_path %></li>
             <% end %>
             <li class=" dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= link_to(avatar_for(current_user, size: 35), current_user) %>

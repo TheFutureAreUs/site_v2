@@ -9,7 +9,8 @@
 .new-review, .edit-review{
   @include background-tile;
   margin-top: 40px;
-  margin-bottom:40px;
+	margin-bottom:40px;
+	width: 500px;
 
 	h1 {
 		margin-top: 0;
@@ -24,4 +25,12 @@
 
 	}
 
+}
+
+.next-rev {
+	text-align: center;
+}
+
+.raty-rating {
+	text-decoration: bold;
 }

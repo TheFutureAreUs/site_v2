@@ -11,7 +11,6 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "social-share-button";
 
 
 //scss files imported here
@@ -37,3 +36,6 @@
 $highlight: #8bc6db;
 $dark: #424652;
 
+.fa-exclamation-triangle {
+  text-align: center;
+}

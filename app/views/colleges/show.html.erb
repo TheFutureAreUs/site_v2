@@ -24,13 +24,12 @@
           <div class="panel-body">
             <div class="sign-prof">
               <h2 class="thanks_title">No services found!</h2>
-              <div class="sign_text">
+              <div class="sign_text">  
                 <% if user_signed_in? && current_user.customer_id.present? %>
                   <strong><%= link_to 'NOW GO POST!', new_listing_path, class: 'thank_text' %></strong>
                 <% else %>
                   <strong><%= link_to 'NOW GO POST!', new_charge_path, class: 'thank_text' %></strong>
                 <% end %>
-                <%= social_share_button_tag(:allow_sites => %w(twitter facebook)) %>                
               </div>     
             </div> 
           </div> 

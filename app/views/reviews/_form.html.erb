@@ -1,10 +1,11 @@
-<%= simple_form_for([@listing, @listing.reviews.build]) do |f| %>
-  <div id="rating-form">
-    <label>Rating</label>
-  </div>
-  <%= f.input :comment %>
-  <%= f.button :submit, class: 'btn btn-info' %>
-<% end %>
+<div class="next-rev">
+  <%= simple_form_for([@listing, @listing.reviews.build]) do |f| %>
+    <div id="rating-form">
+      <label><h3 class="raty-rating">Rating</h3></label>
+    </div>
+    <%= f.button :submit, class: 'btn btn-info' %>
+  <% end %>
+</div>
 
 <script>
   $('#rating-form').raty({

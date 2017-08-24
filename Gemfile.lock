@@ -82,9 +82,6 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    devise_invitable (1.7.2)
-      actionmailer (>= 4.1.0)
-      devise (>= 4.0.0)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -381,7 +378,6 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise (~> 4.3)
-  devise_invitable (~> 1.7.0)
   dotenv-rails
   fog
   font-awesome-sass (~> 4.7)

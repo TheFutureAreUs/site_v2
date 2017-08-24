@@ -4,43 +4,44 @@
 </ol>
 
 <div class="container">
-  <div class="certain-cat">
-    <div class="col-md-1 col-lg-2"></div>
-    <div class="col-md-10 col-lg-8 text-xs-center">
-      <% if @listings.present?  %>
-        <% @listings.each do |f| %>
-          <div class="post-panel">
-            <h4 class="listing-title listing-bold"><%= link_to f.title, f%></h1>
-            <p class="tags"><%= raw f.tags.map { |t| link_to t.name, listings_path(tag: t.name) }.join(', ') %></p>
-            <p class="listing-desc"><%= truncate(f.description, length: 130) %></p>
-            <%= link_to "Add Review", new_listing_review_path(f) %>
-            <%= link_to 'Read More', f, class: 'read-more' %>
-              <br />
-              <div class="time"><%= f.created_at.strftime('%B %d, %Y') %> - (<%= f.address %>)</div>
-          </div>
-        <% end %>
-      <% else %>
-       <div class="row">
-        <div class="col-md-6 col-md-offset-3 panel panel-default form-style">
-          <div class="panel-body">
-            <div class="sign-prof">
-              <h2 class="thanks_title">No listings found!</h2>
-              <div class="sign_text">
-                <% if current_user.customer_id.present? %>
-                  <strong><%= link_to 'NOW GO POST!', new_listing_path, class: 'thank_text' %></strong>
-                <% else %>
-                  <strong><%= link_to 'NOW GO POST!', new_charge_path, class: 'thank_text' %></strong>
-                <% end %>
-              </div>     
+    <div class="certain-cat">
+      <div class="col-md-1 col-lg-2"></div>
+      <div class="col-md-10 col-lg-8 text-xs-center">
+        <% if @listings.present?  %>
+          <% @listings.each do |f| %>
+            <div class="post-panel">
+              <h4 class="listing-title listing-bold"><%= link_to f.title, f%></h1>
+              <p class="tags"><%= raw f.tags.map { |t| link_to t.name, listings_path(tag: t.name) }.join(', ') %></p>
+              <p class="listing-desc"><%= truncate(f.description, length: 130) %></p>
+              <%= link_to 'Read More', f, class: 'read-more' %><br />
+                <br />
+                <div class="time"><%= f.created_at.strftime('%B %d, %Y') %> - (<%= f.address %>)</div>
+            </div>
+          <% end %>
+        <% else %>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 panel panel-default form-style">
+            <div class="panel-body">
+              <div class="sign-prof">
+                <h2 class="thanks_title">No services found!</h2>
+                <div class="sign_text">  
+                  <% if user_signed_in? && current_user.customer_id.present? %>
+                    <strong><%= link_to 'NOW GO POST!', new_listing_path, class: 'thank_text' %></strong>
+                  <% else %>
+                    <strong><%= link_to 'NOW GO POST!', new_charge_path, class: 'thank_text' %></strong>
+                  <% end %>
+                  <br />
+                  <br />
+                  <strong><h4>If you know someone who would benefit from using this site hit the button bellow: </h4></strong>
+                  <br />
+                  <%= link_to 'Refer a friend', contacts_path, class: 'btn btn-info' %></strong>
+                </div>     
+              </div> 
             </div> 
           </div> 
-        </div> 
+        </div>
+        <% end %>
+        <%= will_paginate @listings, previous_label: "Older", next_label: "Newer", inner_window: 2, outer_window: 0 %>
       </div>
-      <% end %>
-      <%= will_paginate @listings, previous_label: "Older", next_label: "Newer", inner_window: 2, outer_window: 0 %>
-      
-      
     </div>
   </div>
-  
-</div>

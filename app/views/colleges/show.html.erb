@@ -30,6 +30,7 @@
                 <% else %>
                   <strong><%= link_to 'NOW GO POST!', new_charge_path, class: 'thank_text' %></strong>
                 <% end %>
+                <%= social_share_button_tag(:allow_sites => %w(twitter facebook)) %>                
               </div>     
             </div> 
           </div> 

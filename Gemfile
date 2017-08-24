@@ -35,6 +35,7 @@ gem 'sass', '~> 3.5'
 gem 'simple_form'
 gem 'cancan'
 gem 'amcharts.rb'
+gem 'social-share-button'
 #------------------------------------------------------------------------------------
 
 

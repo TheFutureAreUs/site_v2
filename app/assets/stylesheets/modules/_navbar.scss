@@ -1,51 +1,59 @@
-.search-bar {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: rgb(78, 203, 252);
+#login-dp {
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
 }
 
-.navbar-default {
-  border: 1px solid rgba(0,0,0,0.09);
-  background: white;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-  border-radius: 3px;
-  background-color: white;
-  border-color: #e7e7e7;
-  padding: 1.0em;
-  padding-bottom: 0em;
+#login-dp .help-block {
+    font-size:12px    
 }
 
-.navbar {
-  margin-bottom: 0px;
-  padding: 5px 0;
-  padding-bottom: 0;
+#login-dp .bottom {
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
 }
 
-.drop {
-  background-color: white;
-  border-color: #e7e7e7;
-  color: #777;
+#login-dp .social-buttons {
+    margin:12px 0    
+}
+#login-dp .social-buttons a {
+    width: 49%;
 }
 
-.margin-drop {
-  margin-top: 9px;
+#login-dp .form-group {
+    margin-bottom: 10px;
 }
 
-.left-side {
-  color: #e7e7e7;
-  margin-right: -12;
+.btn-fb { 
+    color: #fff;
+    background-color:#3b5998;
 }
 
-img.nav_image {
-  height: 150px;
-  width: 250px;
-  padding: 0;
-  display: block;
-  margin-right: 350px;
+.btn-fb:hover {
+    color: #fff;
+    background-color:#496ebc 
 }
 
+.btn-tw {
+    color: #fff;
+    background-color:#55acee;
+}
 
+.btn-tw:hover {
+    color: #fff;
+    background-color:#59b5fa;
+}
 
-.navbar-default .navbar-nav > li > a {
-  color: rgb(78, 203, 252);
+@media(max-width:768px) {
+    #login-dp {
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom {
+        background-color: inherit;
+        border-top:0 none;
+    }
 }

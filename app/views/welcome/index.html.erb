@@ -2,64 +2,97 @@
   <!-- Welcome top section -->
   <div class="home-img">
     <div class="home-caption">
-      <aside class="text-left">
-          <div class="ey_nav_div">
-              <div class="explore-topics">
-                <h2 class="map_search card-top-title">GET STARTED</h2>
-              </div>
-              <p>Welcome to TheFutureAreUs, We provide students a platform to promote your business, for a better and brighter future!</p>
-    
-              <ul>
-                <li>Choose the state your school is in</li>
-                <li>Select the school</li>
-                <li>Check out our <%= link_to 'pricing plans', new_charge_path %></li>
-                <li>Sign in/ Sign up with School email required (.edu)</li>
-                <li>Post your service, refer a friend, give a rating, or search for a service!</li>
-              </ul>
-              <span class="border">SEARCH MAP</span>
-          </div>
-        </aside>
+      <span class="border">GET STARTED 
+        <br />
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>   
+      </span>
     </div>
   </div>
-  <div class="">
+  <div class="container">
+    <div class="get_started">
+      <h2>Welcome to TheFutureAreUs</h2> 
+      <p>We provide students a platform to promote your business, for a better and brighter future!</p>
+      <!-- description on choosing state -->
+      <div class="site_description">
+          <div class="moar-pad">
+            <i class="fa fa-map-marker iconDetails image_border" aria-hidden="true"></i>               
+          </div>
+          <h4>Choose the state your school is in</h4>      
+          <div class="description-home">
+            <p>Lorem ipsum dolor amet humblebrag lomo seitan, tacos echo park prism YOLO gentrify. Cold-pressed tousled kickstarter kinfolk microdosing, enamel pin fanny pack ramps celiac chartreuse XOXO live-edge venmo flexitarian quinoa. </p>       
+          </div> 
+      </div>
+
+      <!-- description on selecting school -->
+      <div class="site_description">
+        <div class="moar-pad">
+          <i class="fa fa-graduation-cap iconDetails image_border" aria-hidden="true"></i>
+        </div>
+        <h4>Select the school</h4>
+        <div class="description-home">
+          <p>Cardigan thundercats taiyaki godard knausgaard shaman. Hashtag iPhone man bun vape pickled. Letterpress fixie helvetica schlitz hammock brooklyn, mustache direct trade kickstarter.</p>
+        </div>
+      </div>
+
+      <!-- description on pricing plans -->
+      <div class="site_description">
+        <div class="moar-pad">
+          <i class="fa fa-credit-card iconDetails image_border" aria-hidden="true"></i>
+        </div>
+        <h4>Check out our <%= link_to 'pricing plans', new_charge_path %></h4>
+        <div class="description-home">
+          <p>Subway tile health goth pour-over blue bottle XOXO tilde taxidermy cardigan polaroid readymade tbh live-edge artisan. Seitan chillwave narwhal freegan brooklyn glossier af retro williamsburg gochujang.</p>           
+        </div>
+      </div>
+
+      <!-- description on signing up -->
+      <div class="site_description">
+        <div class="moar-pad">
+          <i class="fa fa-users iconDetails image_border" aria-hidden="true"></i>
+        </div>
+        <h4>Sign in/ Sign up with School email required (.edu)</h4>
+        <div class="description-home">
+          <p>Cronut air plant messenger bag pabst. Gochujang flexitarian umami salvia. Quinoa skateboard heirloom pour-over 3 wolf moon wayfarers.</p>        
+        </div>
+      </div>
+
+      <!-- description on posting service/business -->
+      <div class="mid">
+        <div class="last-section">
+          <i class="fa fa-pencil-square-o iconDetails lastIcon image_border" aria-hidden="true"></i>
+          <h4>Post your service, refer a friend, give a rating, or search for a service!</h4>
+          <div class="">
+            <p> Brooklyn disrupt cardigan street art, palo santo drinking vinegar bitters. Echo park locavore humblebrag mixtape. Kombucha taxidermy artisan vaporware affogato raw denim. Celiac beard fashion axe, shabby chic thundercats shaman schlitz chia.</p>        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     
     <!-- Map/Search Section -->
-    <div class="dis-sidebar">
-      <div class="bn-box">
-        <h2 class="college-top-title">CHOOSE YOUR SCHOOL</h2>
-        <div class="alert alert-warning alt-container college-notice" role="alert">
-          <p class="alert-heading"><strong>NOTICE!</strong></p>
-          <p class="mb-0 notice-text">Not all of the colleges in the country have been added, either <%= link_to 'contact us', new_contact_path %> or please subscribe to our mailing list below in the footer in order to get updates on your college.</p>
-        </div>
-        <div class=" state-div wel-side-scroll row"  style="width:100%">
-          <div class="scroll-pane">
-            <ul id="info" class="sch-col">
-              <li></li>
-            </ul>
+    <div class="map-align">
+      <div class="dis-sidebar">
+        <div class="bn-box">
+          <h2 class="college-top-title">CHOOSE YOUR SCHOOL</h2>
+          <div class="alert alert-warning alt-container college-notice" role="alert">
+            <p class="alert-heading"><strong>NOTICE!</strong></p>
+            <p class="mb-0 notice-text">Not all of the colleges in the country have been added, either <%= link_to 'contact us', new_contact_path %> or please subscribe to our mailing list below in the footer in order to get updates on your college.</p>
+          </div>
+          <div class=" state-div wel-side-scroll row"  style="width:100%">
+            <div class="scroll-pane">
+              <ul id="info" class="sch-col">
+                <li></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <aside class="col-md-4 sec-sidebar text-left">
-      <div class="ey_nav_div">
-          <div class="explore-topics">
-            <h2 class="map_search card-top-title">GET STARTED</h2>
-          </div>
-          <p>Welcome to TheFutureAreUs, We provide students a platform to promote your business, for a better and brighter future!</p>
-
-          <ul>
-            <li>Choose the state your school is in</li>
-            <li>Select the school</li>
-            <li>Check out our <%= link_to 'pricing plans', new_charge_path %></li>
-            <li>Sign in/ Sign up with School email required (.edu)</li>
-            <li>Post your service, refer a friend, give a rating, or search for a service!</li>
-          </ul>
-        
-      </div>
-    </aside>
-    
+      
+      <div class="map-section">
         <%= render "layouts/home_map" %>
-    
+      </div>  
     </div>
+    
+
   </div>
 </body>

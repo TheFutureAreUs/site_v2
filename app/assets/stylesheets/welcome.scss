@@ -51,12 +51,11 @@ a {
 }
 
 .wel-side-scroll {
-    width: 300px;
-    height: 700px;
+    height: 100%;
     overflow-x: scroll;
     //white-space: nowrap;
     max-width: 2000px;
-    max-height: 800px;
+    max-height: 100%;
     text-align: center;
 }
 .card-top-title {
@@ -298,7 +297,7 @@ h1 {
 }
 
 .bn-box {
-  width: 277px;
+  width: 100%;
   height: 480px;
 }
 
@@ -346,6 +345,7 @@ li.sch-col { list-style-type: none; }
 
 .home-img {
   background-image: url(TheFutureAreUs.jpg);
+  height: 600px;
   min-height: 100%;
   position: relative;
   opacity: 0.65;
@@ -370,4 +370,70 @@ li.sch-col { list-style-type: none; }
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+}
+
+.home-caption .sec-sidebar {
+  position: relative;
+}
+
+.get_started {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.get_started .site_description {
+  text-align: left;
+}
+
+.site_description {
+  width: 50px;
+  height: 50px;
+  padding:1%;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 200px;
+}
+
+.iconDetails {
+  font-size: 30px; 
+  padding-top: 10px;
+}
+
+.image_border {
+  border: 1px solid black;
+  border-radius: 40px;
+  height: 50px;
+  width: 50px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.mid {
+  float: left;
+  position: relative;
+}
+
+.last-section {
+  float: left;
+  position: relative;
+}
+
+.lastIcon {
+  float: none;
+}
+
+.description-home {
+  margin-top:auto;
+  margin-bottom:auto;
+  display:flex;
+}
+
+.moar-pad {
+  margin-right: 30px;
+}
+
+.map-align {
+  width: 100%;
 }

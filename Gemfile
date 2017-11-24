@@ -28,13 +28,16 @@ gem 'fog'
 gem 'font-awesome-sass', '~> 4.7'
 gem 'slide-down-alerts-rails', '~> 0.0.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-gem 'will_paginate', '~> 3.1'
+gem 'will_paginate'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'underscore-rails'
 gem 'sass', '~> 3.5'
 gem 'simple_form'
 gem 'cancan'
 gem 'amcharts.rb'
+gem 'rails_admin', '~> 1.2'
+gem 'kaminari'
+
 #------------------------------------------------------------------------------------
 
 

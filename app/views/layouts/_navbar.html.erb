@@ -1,110 +1,149 @@
-
-<!--<div class="nav-fixed">
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav navbar-left">
-          <li class="button-left left-side home"><%= link_to '<i class="fa fa-home" aria-hidden="true"></i>'.html_safe, root_path %></li>
-  
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Search By College", regions_path, class: 'button button-list search-bar' %></li>
-        <li><%= image_tag  "TheFutureAreUs.jpg", class: 'nav_image' %></li>
-
-        <% if user_signed_in? %>
-          <li><%= link_to "Categories", categories_path, class: 'button button-list search-bar' %></li>
-              <li class="button button-list"><%= link_to "Post Your Service!", new_listing_path %></li>
-           
-            <li class=" dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= link_to(avatar_for(current_user, size: 35), current_user) %>
-            </li>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li class="dropdown-item"><%= link_to 'My Profile', current_user %></li>
-
-              <li class="dropdown-item"><%= link_to 'Edit My Profile', edit_user_path(current_user) %></li>
-
-              <li class="dropdown-item"><%= link_to 'My Account', edit_user_registration_path %></li>
-              <li class="dropdown-item"><%= link_to 'My Services', mylistings_path %></li>
-              <li class="dropdown-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
-            </div>
-        <% else %>
-            <li><%= link_to 'Sign In / Sign Up', new_user_session_path, class: 'button button-list search-bar' %>
-            </li>
-        <% end %>
-      </ul>
-    </div>
-  </nav> 
-</div> -->
-
 <nav class="navbar navbar-default navbar-inverse" role="navigation">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to "TheFutureAreUs", root_path, class: 'navbar-brand' %>
-      </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to "TheFutureAreUs", root_path, class: 'navbar-brand' %>
+        </div>
   
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Categories", categories_path, class: 'button button-list search-bar' %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle button button-list search-bar" data-toggle="dropdown">More<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li class=""><%= link_to "About", about_path %></li>
-              <li class=""><%= link_to "Privacy Policy", privacy_path %></li>
-              <li class=""><%= link_to "Terms of Use", terms_path %></li>
-              <li class="divider"></li>
-              <li class=""><%= link_to "Contact Us", new_contact_path %></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><%= link_to "Categories", categories_path, class: 'button button-list search-bar' %></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle button button-list search-bar" data-toggle="dropdown">More<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class=""><%= link_to "About", about_path %></li>
+                        <li class=""><%= link_to "Privacy Policy", privacy_path %></li>
+                        <li class=""><%= link_to "Terms of Use", terms_path %></li>
+                        <li class="divider"></li>
+                        <li class=""><%= link_to "Contact Us", new_contact_path %></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><p class="navbar-text">Already have an account?</p></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle button button-list search-bar" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-        <ul id="login-dp" class="dropdown-menu">
-          <li>
-             <div class="row">
-                <div class="col-md-12">
-                  Login via
-                  <div class="social-buttons">
-                    <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                    <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                  </div>
-                                  or
-                   <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                      <div class="form-group">
-                         <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                      </div>
-                      <div class="form-group">
-                         <label class="sr-only" for="exampleInputPassword2">Password</label>
-                         <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                               <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                      </div>
-                      <div class="form-group">
-                         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                      </div>
-                      <div class="checkbox">
-                         <label>
-                         <input type="checkbox"> keep me logged-in
-                         </label>
-                      </div>
-                   </form>
-                </div>
-                <div class="bottom text-center">
-                  New here ? <a href="#"><b>Join Us</b></a>
-                </div>
-             </div>
-          </li>
-        </ul>
-          </li>
+            <% if user_signed_in? %>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=" dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= link_to(avatar_for(current_user, size: 40), current_user) %>
+                    </li>
+                    <ul class="dropdown-menu dropdown-cart" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <span class="item">
+                                <span class="item-left">
+                                    <i class="fa fa-user" aria-hidden="true"></i>  
+                                    <span class="item-info">
+                                        <span><%= link_to 'My Profile', current_user %></span>
+                                    </span>                      
+                                </span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="item">
+                                <span class="item-left">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>  
+                                    <span class="item-info">
+                                        <span><%= link_to 'Edit My Profile', edit_user_path(current_user) %></span>
+                                    </span>                      
+                                </span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="item">
+                                <span class="item-left">
+                                    <i class="fa fa-id-card-o" aria-hidden="true"></i>  
+                                    <span class="item-info">
+                                        <span><%= link_to 'My Account', edit_user_registration_path %></span>
+                                    </span> 
+                                </span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="item">
+                                <span class="item-left">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    <span class="item-info">
+                                        <span><%= link_to 'My Services', mylistings_path %></span>
+                                    </span>                      
+                                </span>
+                            </span>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                            <span class="item">
+                                <span class="item-left">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    <span class="item-info">
+                                        <span><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></span>
+                                    </span>                        
+                                </span>
+                            </span>
+                        </li>
+                      </ul>
+                </ul>
+            <% else %>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><p class="navbar-text">Already have an account?</p></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle button button-list search-bar" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Login via
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                        </div>
+                                        or
+                                        <!-- Rails Login Form -->
+                                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                                            <div class="row">
+                                                <div class="">
+                                                    <div class="li-Form-control li-Form-control--login">
+                                                        <%= f.label :username, class: 'li-Label' %><br />
+                                                        <%= f.text_field :username, class: 'li-Input form-control' %>
+                                                    </div>
+                                        
+                                                    <div class="li-Form-control li-Form-control--login">
+                                                        <%= f.label :email, class: 'li-Label' %><br />
+                                                        <%= f.email_field :email, class: 'li-Input form-control' %>
+                                                    </div>
+                                        
+                                                    <div class="li-Form-control li-Form-control--login">
+                                                        <%= f.label :password, class: 'li-Label' %><br />
+                                                        <%= f.password_field :password, autocomplete: "off", class: 'li-Input form-control' %>
+                                                    </div>
+                                        
+                                                    <% if devise_mapping.rememberable? -%>
+                                                        <div class="li-Form-control li-Form-control--login">
+                                                            <%= f.check_box :remember_me %>
+                                                            <%= f.label :remember_me, class: 'li-Label'  %>
+                                                        </div>
+                                                    <% end %>
+                                        
+                                                    <div class="form-group">
+                                                        <%= f.submit "Log in", class: 'btn btn-primary btn-block' %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <% end %>
+                                        <div class="bottom text-center">
+                                            New here ? <%= link_to "Join Us", new_charge_path %>
+                                        </div>
+                                    </div>
+                            </li>
+                    </li>
+                </ul>
+            <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

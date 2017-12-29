@@ -41,3 +41,176 @@
 .terms-title {
   text-align: center;
 }
+
+.content-margin {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.content-margin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1192px;
+  box-sizing: border-box;
+}
+
+.flexible-column-frame-component .flexible-column-frame-columns {
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.flexible-column-frame-component .flexible-column-frame-columns {
+  flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+
+.flexible-column-frame-component .flexible-column-frame-columns {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.flexible-column-frame-component .flexible-column-frame-column {
+  padding: 0 12px;
+}
+
+.flexible-column-fame-component .flexible-column-frame-column {
+  display: flex;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.flexible-column-frame-component .flexible-column-frame-column {
+  width: 100%;
+  position: relative;
+}
+
+.flexible-column-frame .rich-text {
+  width: 100%;
+}
+
+.rich-text {
+  max-width: 648px;
+}
+
+.rich-text {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.rich-text {
+  position: relative;
+  overflow: initial;
+}
+
+.rich-text p {
+  margin: 16px 0;
+}
+
+.rich-text-mode-reader {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 28px;
+  font-weight: 400;
+  font-size: 21px;
+}
+
+p strong {
+  font-weight: bolder;
+}
+
+.banner-component {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/*.banner-background gradient.blue-base.banner-background {
+  background-color: rgb(78, 203, 252);
+}*/
+
+.banner-content .content-margin {
+  background-color: rgb(78, 203, 252);
+}
+
+.banner-component .banner-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner-component .banner-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.banner-component .banner-content {
+  margin: auto;
+  position: relative;
+  max-height: 100%;
+  z-index: 2;
+  background-color: rgb(78, 203, 252);
+  background-image: linear-gradient(to right, #006097 0%, #0079b1 33%, 
+  rgb(78, 203, 252) 100%);
+}
+
+.content-margin {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.content-margin {
+  width: 100%;
+  max-width: 1192px;
+  box-sizing: border-box;
+}
+
+.banner-component .banner-content-align-center {
+  text-align: center;
+}
+
+.banner-component .banner-content-container {
+  position: relative;
+  max-height: 100%;
+}
+
+.to-23 {
+  padding-right: calc(((100%) / 47) * 2);
+}
+
+.from-2 {
+  padding-left: calc(((100%) / 47) * 2)
+}
+
+.banner-component .banner-headline {
+  color: #fff;
+}
+
+.banner-component .banner-headline {
+  margin: -8px 0 16px;
+}
+
+.headline-66 {
+  line-height: 72px;
+  font-weight: 200;
+  font-size: 66px;
+}

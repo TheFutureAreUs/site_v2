@@ -43,7 +43,7 @@ a {
 .side-scroll {
     width: 500;
     height: 300px;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     //white-space: nowrap;
     max-width: 2000px;
     max-height: 800px;
@@ -59,7 +59,7 @@ a {
     text-align: center;
 }
 .card-top-title {
-    font-family: 'Bellefair', serif;
+    font-family: 'Ubuntu', sans-serif;  
     text-align: center;
     border-bottom: 1px solid rgba(0,0,0,.15)!important;
     font-size: 30px;
@@ -69,7 +69,7 @@ a {
 
 .parallax-struct {
     background-color: white;
-    padding: 50px 80px;
+    padding: 5px 80px;
     position:relative;
     width:100%;
 }
@@ -511,4 +511,8 @@ li.sch-col { list-style-type: none; }
 
 .social--icon i:hover {
   transform: scale(1.5);
+}
+
+.navbar {
+  margin-bottom: 0px;
 }

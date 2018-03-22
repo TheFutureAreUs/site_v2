@@ -76,6 +76,17 @@
                             </span>
                         </li>
 
+                        <li>
+                            <span class="item">
+                                <span class="item-left">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    <span class="item-info">
+                                        <span><%= link_to 'Write Listing', new_listing_path %></span>
+                                    </span>                      
+                                </span>
+                            </span>
+                        </li>
+
                         <li class="divider"></li>
                         <li>
                             <span class="item">
@@ -91,19 +102,12 @@
                 </ul>
             <% else %>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><p class="navbar-text">Already have an account?</p></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle button button-list search-bar" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                         <ul id="login-dp" class="dropdown-menu">
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        Login via
-                                        <div class="social-buttons">
-                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                                        </div>
-                                        or
                                         <!-- Rails Login Form -->
                                         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                                             <div class="row">

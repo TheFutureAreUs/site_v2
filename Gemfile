@@ -37,7 +37,7 @@ gem 'cancan'
 gem 'amcharts.rb'
 gem 'rails_admin', '~> 1.2'
 gem 'kaminari'
-
+gem "paperclip", "~> 5.0.0"
 #------------------------------------------------------------------------------------
 
 
